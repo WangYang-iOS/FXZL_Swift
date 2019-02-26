@@ -8,14 +8,17 @@
 
 import UIKit
 
-class HQNavigationController: UINavigationController {
+class HQNavigationController: UINavigationController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBarHidden(true, animated: false)
-        self.delegate = self
-        if self.interactivePopGestureRecognizer?.delegate == nil {
-            self.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+//        //这样就不能侧滑了
+//        setNavigationBarHidden(true, animated: false)
+        navigationBar.isHidden = true
+        delegate = self
+        
+        if interactivePopGestureRecognizer?.delegate == nil {
+            interactivePopGestureRecognizer?.delegate = self
         }
     }
     
@@ -29,12 +32,11 @@ class HQNavigationController: UINavigationController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 }
 
 extension HQNavigationController : UINavigationControllerDelegate {
-    
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        self.interactivePopGestureRecognizer?.isEnabled = viewControllers.count > 1
+        interactivePopGestureRecognizer?.isEnabled = viewControllers.count > 1
     }
 }
+

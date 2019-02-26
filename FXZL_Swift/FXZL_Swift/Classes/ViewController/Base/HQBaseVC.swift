@@ -18,4 +18,8 @@ class HQBaseVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    deinit {
+        print(NSStringFromClass(self.classForCoder) + "被释放了")
+    }
 }

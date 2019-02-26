@@ -33,6 +33,11 @@ func POINT(_ x:CGFloat,_ y:CGFloat) -> CGPoint {
     return CGPoint(x: x, y: y)
 }
 
+func AdjustmentBehavior(_ scrollView : UIScrollView) -> Void {
+    if #available(iOS 11.0, *) {
+        scrollView.contentInsetAdjustmentBehavior = .never
+    }
+}
 
 
 

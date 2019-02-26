@@ -12,6 +12,9 @@ class HQHomeVC: HQBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        present(HQNavigationController(rootViewController: HQLoginVC()), animated: true, completion: nil)
+        
     }
 
 }

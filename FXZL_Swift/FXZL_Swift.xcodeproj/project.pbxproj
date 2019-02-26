@@ -37,6 +37,7 @@
 		E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C852072224CFB80018A9BF /* HQCommonConfig.swift */; };
 		E4C8520B2224DCD40018A9BF /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */; };
 		E4C8520D2224E1BB0018A9BF /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */; };
+		E4C8520F2224EE130018A9BF /* UITextField+LimitCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8520E2224EE130018A9BF /* UITextField+LimitCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		E4C852072224CFB80018A9BF /* HQCommonConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonConfig.swift; sourceTree = "<group>"; };
 		E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
+		E4C8520E2224EE130018A9BF /* UITextField+LimitCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+LimitCount.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +441,7 @@
 			children = (
 				E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */,
 				E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */,
+				E4C8520E2224EE130018A9BF /* UITextField+LimitCount.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				E4C851E52224C95E0018A9BF /* HQDemandVC.swift in Sources */,
 				E4C852062224CD3A0018A9BF /* HQTabBarController.swift in Sources */,
 				E4C851ED2224CA5C0018A9BF /* HQLoginVC.swift in Sources */,
+				E4C8520F2224EE130018A9BF /* UITextField+LimitCount.swift in Sources */,
 				E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */,
 				E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */,
 			);

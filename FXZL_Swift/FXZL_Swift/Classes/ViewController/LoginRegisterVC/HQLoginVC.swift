@@ -10,26 +10,19 @@ import UIKit
 
 class HQLoginVC: HQBaseVC {
 
+    @IBOutlet weak var topSpace: NSLayoutConstraint!
+    @IBOutlet weak var phoneTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        topSpace.constant = 44 + kNavH
+        phoneTF.limitCount = 11
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func clickLoginButton(_ sender: UIButton) {
+    }
+    @IBAction func clickForgetButton(_ sender: UIButton) {
+        navigationController?.pushViewController(HQPasswordVC(), animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
