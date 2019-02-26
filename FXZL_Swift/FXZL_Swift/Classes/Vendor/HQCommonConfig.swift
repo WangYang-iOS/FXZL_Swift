@@ -8,28 +8,28 @@
 
 import UIKit
 
-let kSpaceName = Bundle.main.infoDictionary!["CFBundleName"]
-let kAppVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"]
+let kSpaceName = Bundle.main.infoDictionary!["CFBundleName"] as! String
+let kAppVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 
 let kScreen                 = UIScreen.main.bounds
 let kScreenW                = kScreen.size.width
 let kScreenH                = kScreen.size.height
-let kSafeTop                = kScreenH >= 812.0 ? 24 : 0
-let kSafeBottom             = kScreenH >= 812.0 ? 34 : 0
-let kNavH                   = kScreenH >= 812.0 ? 88 : 64
-let KTabH                   = 49
+let kSafeTop : CGFloat      = kScreenH >= 812.0 ? 24.0 : 0.0
+let kSafeBottom : CGFloat   = kScreenH >= 812.0 ? 34.0 : 0.0
+let kNavH : CGFloat         = kScreenH >= 812.0 ? 88.0 : 64.0
+let KTabH : CGFloat         = 49
 
 let kLineH                  = 1 / UIScreen.main.scale
 
-func RECT(x:CGFloat,y:CGFloat,width:CGFloat,height:CGFloat) -> CGRect {
+func RECT(_ x:CGFloat,_ y:CGFloat,_ width:CGFloat,_ height:CGFloat) -> CGRect {
     return CGRect(x: x, y: y, width: width, height: height)
 }
 
-func SIZE(width:CGFloat,height:CGFloat) -> CGSize {
+func SIZE(_ width:CGFloat,_ height:CGFloat) -> CGSize {
     return CGSize(width: width, height: height)
 }
 
-func POINT(x:CGFloat,y:CGFloat) -> CGPoint {
+func POINT(_ x:CGFloat,_ y:CGFloat) -> CGPoint {
     return CGPoint(x: x, y: y)
 }
 

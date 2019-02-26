@@ -35,6 +35,8 @@
 		E4C852042224CB840018A9BF /* HQNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C852032224CB840018A9BF /* HQNavigationController.swift */; };
 		E4C852062224CD3A0018A9BF /* HQTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C852052224CD3A0018A9BF /* HQTabBarController.swift */; };
 		E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C852072224CFB80018A9BF /* HQCommonConfig.swift */; };
+		E4C8520B2224DCD40018A9BF /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */; };
+		E4C8520D2224E1BB0018A9BF /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		E4C852032224CB840018A9BF /* HQNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQNavigationController.swift; sourceTree = "<group>"; };
 		E4C852052224CD3A0018A9BF /* HQTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQTabBarController.swift; sourceTree = "<group>"; };
 		E4C852072224CFB80018A9BF /* HQCommonConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonConfig.swift; sourceTree = "<group>"; };
+		E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		E49FD0922223F1E900F15930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E4C852092224DCA50018A9BF /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -429,6 +434,15 @@
 			path = MessageVC;
 			sourceTree = "<group>";
 		};
+		E4C852092224DCA50018A9BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */,
+				E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,6 +526,7 @@
 				E49FD09B2223F22700F15930 /* HQBaseVC.swift in Sources */,
 				E4C851E12224C92B0018A9BF /* HQCircleVC.swift in Sources */,
 				E49FD0BC2223F37800F15930 /* HQBaseViewModel.swift in Sources */,
+				E4C8520B2224DCD40018A9BF /* UIColor+Hex.swift in Sources */,
 				E4C851FD2224CAA40018A9BF /* HQMessageVC.swift in Sources */,
 				E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */,
 				E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */,
@@ -519,6 +534,7 @@
 				E4C851F52224CA760018A9BF /* HQPasswordVC.swift in Sources */,
 				E4C852042224CB840018A9BF /* HQNavigationController.swift in Sources */,
 				E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */,
+				E4C8520D2224E1BB0018A9BF /* UIView+Category.swift in Sources */,
 				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
 				E4C851E92224C96A0018A9BF /* HQHomeVC.swift in Sources */,
 				E4C851E52224C95E0018A9BF /* HQDemandVC.swift in Sources */,

@@ -12,6 +12,7 @@ class HQNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBarHidden(true, animated: false)
         self.delegate = self
         if self.interactivePopGestureRecognizer?.delegate == nil {
             self.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
