@@ -14,6 +14,24 @@
 		E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD0B02223F32A00F15930 /* HQBaseView.swift */; };
 		E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD0B92223F36800F15930 /* HQBaseModel.swift */; };
 		E49FD0BC2223F37800F15930 /* HQBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD0BB2223F37800F15930 /* HQBaseViewModel.swift */; };
+		E4C851E12224C92B0018A9BF /* HQCircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851DF2224C92B0018A9BF /* HQCircleVC.swift */; };
+		E4C851E22224C92B0018A9BF /* HQCircleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851E02224C92B0018A9BF /* HQCircleVC.xib */; };
+		E4C851E52224C95E0018A9BF /* HQDemandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851E32224C95E0018A9BF /* HQDemandVC.swift */; };
+		E4C851E62224C95E0018A9BF /* HQDemandVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851E42224C95E0018A9BF /* HQDemandVC.xib */; };
+		E4C851E92224C96A0018A9BF /* HQHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851E72224C96A0018A9BF /* HQHomeVC.swift */; };
+		E4C851EA2224C96A0018A9BF /* HQHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851E82224C96A0018A9BF /* HQHomeVC.xib */; };
+		E4C851ED2224CA5C0018A9BF /* HQLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851EB2224CA5C0018A9BF /* HQLoginVC.swift */; };
+		E4C851EE2224CA5C0018A9BF /* HQLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851EC2224CA5C0018A9BF /* HQLoginVC.xib */; };
+		E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851EF2224CA690018A9BF /* HQRegisterVC.swift */; };
+		E4C851F22224CA690018A9BF /* HQRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851F02224CA690018A9BF /* HQRegisterVC.xib */; };
+		E4C851F52224CA760018A9BF /* HQPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851F32224CA760018A9BF /* HQPasswordVC.swift */; };
+		E4C851F62224CA760018A9BF /* HQPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851F42224CA760018A9BF /* HQPasswordVC.xib */; };
+		E4C851F92224CA880018A9BF /* HQInviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851F72224CA880018A9BF /* HQInviteVC.swift */; };
+		E4C851FA2224CA880018A9BF /* HQInviteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851F82224CA880018A9BF /* HQInviteVC.xib */; };
+		E4C851FD2224CAA40018A9BF /* HQMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851FB2224CAA40018A9BF /* HQMessageVC.swift */; };
+		E4C851FE2224CAA40018A9BF /* HQMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851FC2224CAA40018A9BF /* HQMessageVC.xib */; };
+		E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851FF2224CAAF0018A9BF /* HQMineVC.swift */; };
+		E4C852022224CAAF0018A9BF /* HQMineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C852002224CAAF0018A9BF /* HQMineVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +44,24 @@
 		E49FD0B02223F32A00F15930 /* HQBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBaseView.swift; sourceTree = "<group>"; };
 		E49FD0B92223F36800F15930 /* HQBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBaseModel.swift; sourceTree = "<group>"; };
 		E49FD0BB2223F37800F15930 /* HQBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBaseViewModel.swift; sourceTree = "<group>"; };
+		E4C851DF2224C92B0018A9BF /* HQCircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCircleVC.swift; sourceTree = "<group>"; };
+		E4C851E02224C92B0018A9BF /* HQCircleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQCircleVC.xib; sourceTree = "<group>"; };
+		E4C851E32224C95E0018A9BF /* HQDemandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandVC.swift; sourceTree = "<group>"; };
+		E4C851E42224C95E0018A9BF /* HQDemandVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQDemandVC.xib; sourceTree = "<group>"; };
+		E4C851E72224C96A0018A9BF /* HQHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQHomeVC.swift; sourceTree = "<group>"; };
+		E4C851E82224C96A0018A9BF /* HQHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQHomeVC.xib; sourceTree = "<group>"; };
+		E4C851EB2224CA5C0018A9BF /* HQLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQLoginVC.swift; sourceTree = "<group>"; };
+		E4C851EC2224CA5C0018A9BF /* HQLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLoginVC.xib; sourceTree = "<group>"; };
+		E4C851EF2224CA690018A9BF /* HQRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQRegisterVC.swift; sourceTree = "<group>"; };
+		E4C851F02224CA690018A9BF /* HQRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQRegisterVC.xib; sourceTree = "<group>"; };
+		E4C851F32224CA760018A9BF /* HQPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQPasswordVC.swift; sourceTree = "<group>"; };
+		E4C851F42224CA760018A9BF /* HQPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQPasswordVC.xib; sourceTree = "<group>"; };
+		E4C851F72224CA880018A9BF /* HQInviteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQInviteVC.swift; sourceTree = "<group>"; };
+		E4C851F82224CA880018A9BF /* HQInviteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQInviteVC.xib; sourceTree = "<group>"; };
+		E4C851FB2224CAA40018A9BF /* HQMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQMessageVC.swift; sourceTree = "<group>"; };
+		E4C851FC2224CAA40018A9BF /* HQMessageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQMessageVC.xib; sourceTree = "<group>"; };
+		E4C851FF2224CAAF0018A9BF /* HQMineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQMineVC.swift; sourceTree = "<group>"; };
+		E4C852002224CAAF0018A9BF /* HQMineVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQMineVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +213,8 @@
 		E49FD09C2223F2D000F15930 /* DemandVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C851E32224C95E0018A9BF /* HQDemandVC.swift */,
+				E4C851E42224C95E0018A9BF /* HQDemandVC.xib */,
 			);
 			path = DemandVC;
 			sourceTree = "<group>";
@@ -184,6 +222,8 @@
 		E49FD09D2223F2D000F15930 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C851FF2224CAAF0018A9BF /* HQMineVC.swift */,
+				E4C852002224CAAF0018A9BF /* HQMineVC.xib */,
 			);
 			path = MineVC;
 			sourceTree = "<group>";
@@ -191,6 +231,8 @@
 		E49FD09E2223F2D000F15930 /* CircleVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C851DF2224C92B0018A9BF /* HQCircleVC.swift */,
+				E4C851E02224C92B0018A9BF /* HQCircleVC.xib */,
 			);
 			path = CircleVC;
 			sourceTree = "<group>";
@@ -198,6 +240,14 @@
 		E49FD09F2223F2D000F15930 /* LoginRegisterVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C851F72224CA880018A9BF /* HQInviteVC.swift */,
+				E4C851F82224CA880018A9BF /* HQInviteVC.xib */,
+				E4C851EB2224CA5C0018A9BF /* HQLoginVC.swift */,
+				E4C851EC2224CA5C0018A9BF /* HQLoginVC.xib */,
+				E4C851F32224CA760018A9BF /* HQPasswordVC.swift */,
+				E4C851F42224CA760018A9BF /* HQPasswordVC.xib */,
+				E4C851EF2224CA690018A9BF /* HQRegisterVC.swift */,
+				E4C851F02224CA690018A9BF /* HQRegisterVC.xib */,
 			);
 			path = LoginRegisterVC;
 			sourceTree = "<group>";
@@ -205,6 +255,8 @@
 		E49FD0A02223F2D000F15930 /* MessageVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C851FB2224CAA40018A9BF /* HQMessageVC.swift */,
+				E4C851FC2224CAA40018A9BF /* HQMessageVC.xib */,
 			);
 			path = MessageVC;
 			sourceTree = "<group>";
@@ -212,6 +264,8 @@
 		E49FD0A12223F2D000F15930 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C851E72224C96A0018A9BF /* HQHomeVC.swift */,
+				E4C851E82224C96A0018A9BF /* HQHomeVC.xib */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -392,6 +446,7 @@
 		E49FD0732223F08100F15930 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HQ;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = yons;
@@ -424,8 +479,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C851EA2224C96A0018A9BF /* HQHomeVC.xib in Resources */,
+				E4C851EE2224CA5C0018A9BF /* HQLoginVC.xib in Resources */,
+				E4C851F22224CA690018A9BF /* HQRegisterVC.xib in Resources */,
+				E4C851FE2224CAA40018A9BF /* HQMessageVC.xib in Resources */,
 				E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */,
+				E4C851E22224C92B0018A9BF /* HQCircleVC.xib in Resources */,
+				E4C851E62224C95E0018A9BF /* HQDemandVC.xib in Resources */,
+				E4C851F62224CA760018A9BF /* HQPasswordVC.xib in Resources */,
 				E49FD0862223F08200F15930 /* Assets.xcassets in Resources */,
+				E4C851FA2224CA880018A9BF /* HQInviteVC.xib in Resources */,
+				E4C852022224CAAF0018A9BF /* HQMineVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +501,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49FD09B2223F22700F15930 /* HQBaseVC.swift in Sources */,
+				E4C851E12224C92B0018A9BF /* HQCircleVC.swift in Sources */,
 				E49FD0BC2223F37800F15930 /* HQBaseViewModel.swift in Sources */,
+				E4C851FD2224CAA40018A9BF /* HQMessageVC.swift in Sources */,
 				E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */,
+				E4C851F92224CA880018A9BF /* HQInviteVC.swift in Sources */,
+				E4C851F52224CA760018A9BF /* HQPasswordVC.swift in Sources */,
+				E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */,
+				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
+				E4C851E92224C96A0018A9BF /* HQHomeVC.swift in Sources */,
+				E4C851E52224C95E0018A9BF /* HQDemandVC.swift in Sources */,
+				E4C851ED2224CA5C0018A9BF /* HQLoginVC.swift in Sources */,
 				E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */,
 				E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */,
 			);
