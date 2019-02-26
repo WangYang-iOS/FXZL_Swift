@@ -21,7 +21,11 @@ class HQPasswordVC: HQBaseVC {
         topSpace.constant = 44 + kNavH
         phoneTF.limitCount = 11
     }
+    @IBAction func clickCodeButton(_ sender: UIButton) {
+        view.endEditing(true)
+    }
     @IBAction func clickSureButton(_ sender: UIButton) {
+        view.endEditing(true)
     }
     
 }

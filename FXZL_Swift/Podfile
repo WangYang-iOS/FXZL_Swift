@@ -1,0 +1,11 @@
+platform :ios,'9.0'
+
+target 'FXZL_Swift' do
+
+use_frameworks!
+pod 'IQKeyboardManagerSwift', '~> 6.2.0'
+pod 'Alamofire', '~> 4.8.1'
+
+end
+
+

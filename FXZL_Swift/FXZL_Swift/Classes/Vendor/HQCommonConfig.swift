@@ -8,8 +8,12 @@
 
 import UIKit
 
-let kSpaceName = Bundle.main.infoDictionary!["CFBundleName"] as! String
-let kAppVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+let kDomain                 = "http://api.fenxiangzl.com/"
+
+let kSpaceName              = Bundle.main.infoDictionary!["CFBundleName"] as! String
+let kAppVersion             = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+let kSystemVersion          = UIDevice.current.systemVersion
+
 
 let kScreen                 = UIScreen.main.bounds
 let kScreenW                = kScreen.size.width

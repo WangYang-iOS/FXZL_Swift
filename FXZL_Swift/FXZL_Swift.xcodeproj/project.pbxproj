@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057BF5BEE2739E96E7E2C866 /* Pods_FXZL_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA86B27DAA13EF8110258EC /* Pods_FXZL_Swift.framework */; };
 		E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD07E2223F08100F15930 /* AppDelegate.swift */; };
 		E49FD0862223F08200F15930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49FD0852223F08200F15930 /* Assets.xcassets */; };
 		E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49FD0872223F08200F15930 /* LaunchScreen.storyboard */; };
@@ -41,9 +42,14 @@
 		E4C85211222526910018A9BF /* HQNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C85210222526910018A9BF /* HQNavigationBar.swift */; };
 		E4C8521322252CB60018A9BF /* UIViewController+HQNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8521222252CB60018A9BF /* UIViewController+HQNavigationBar.swift */; };
 		E4C852152225322C0018A9BF /* NSString+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C852142225322C0018A9BF /* NSString+Category.swift */; };
+		E4C8521722253DF40018A9BF /* HQLoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8521622253DF40018A9BF /* HQLoginVM.swift */; };
+		E4C8521C2225416A0018A9BF /* HQNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C8521B2225416A0018A9BF /* HQNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FA86B27DAA13EF8110258EC /* Pods_FXZL_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FXZL_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9607DEB399DF9E9079E5174C /* Pods-FXZL_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXZL_Swift.debug.xcconfig"; path = "Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		B49DB3A385A7B8EB34403017 /* Pods-FXZL_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXZL_Swift.release.xcconfig"; path = "Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E49FD07B2223F08100F15930 /* FXZL_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXZL_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49FD07E2223F08100F15930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E49FD0852223F08200F15930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 		E4C85210222526910018A9BF /* HQNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQNavigationBar.swift; sourceTree = "<group>"; };
 		E4C8521222252CB60018A9BF /* UIViewController+HQNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HQNavigationBar.swift"; sourceTree = "<group>"; };
 		E4C852142225322C0018A9BF /* NSString+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Category.swift"; sourceTree = "<group>"; };
+		E4C8521622253DF40018A9BF /* HQLoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQLoginVM.swift; sourceTree = "<group>"; };
+		E4C8521B2225416A0018A9BF /* HQNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,17 +95,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057BF5BEE2739E96E7E2C866 /* Pods_FXZL_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A59F8B1F834E773FA84F6C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9607DEB399DF9E9079E5174C /* Pods-FXZL_Swift.debug.xcconfig */,
+				B49DB3A385A7B8EB34403017 /* Pods-FXZL_Swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		804542751774E84D3E1F87AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FA86B27DAA13EF8110258EC /* Pods_FXZL_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E49FD0722223F08100F15930 = {
 			isa = PBXGroup;
 			children = (
 				E49FD07D2223F08100F15930 /* FXZL_Swift */,
 				E49FD07C2223F08100F15930 /* Products */,
+				0A59F8B1F834E773FA84F6C9 /* Pods */,
+				804542751774E84D3E1F87AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +181,7 @@
 		E49FD0922223F1E900F15930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E4C8521822253F9B0018A9BF /* HQNetworkTool */,
 				E4C852092224DCA50018A9BF /* Extensions */,
 			);
 			path = Utils;
@@ -262,14 +291,14 @@
 		E49FD09F2223F2D000F15930 /* LoginRegisterVC */ = {
 			isa = PBXGroup;
 			children = (
-				E4C851F72224CA880018A9BF /* HQInviteVC.swift */,
-				E4C851F82224CA880018A9BF /* HQInviteVC.xib */,
 				E4C851EB2224CA5C0018A9BF /* HQLoginVC.swift */,
 				E4C851EC2224CA5C0018A9BF /* HQLoginVC.xib */,
-				E4C851F32224CA760018A9BF /* HQPasswordVC.swift */,
-				E4C851F42224CA760018A9BF /* HQPasswordVC.xib */,
+				E4C851F72224CA880018A9BF /* HQInviteVC.swift */,
+				E4C851F82224CA880018A9BF /* HQInviteVC.xib */,
 				E4C851EF2224CA690018A9BF /* HQRegisterVC.swift */,
 				E4C851F02224CA690018A9BF /* HQRegisterVC.xib */,
+				E4C851F32224CA760018A9BF /* HQPasswordVC.swift */,
+				E4C851F42224CA760018A9BF /* HQPasswordVC.xib */,
 			);
 			path = LoginRegisterVC;
 			sourceTree = "<group>";
@@ -360,6 +389,7 @@
 		E49FD0AB2223F31100F15930 /* LoginRegisterVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4C8521622253DF40018A9BF /* HQLoginVM.swift */,
 			);
 			path = LoginRegisterVC;
 			sourceTree = "<group>";
@@ -455,6 +485,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E4C8521822253F9B0018A9BF /* HQNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				E4C8521B2225416A0018A9BF /* HQNetworkManager.swift */,
+			);
+			path = HQNetworkTool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,9 +500,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E49FD08D2223F08200F15930 /* Build configuration list for PBXNativeTarget "FXZL_Swift" */;
 			buildPhases = (
+				716B7C0506A2555B71ED3C41 /* [CP] Check Pods Manifest.lock */,
 				E49FD0772223F08100F15930 /* Sources */,
 				E49FD0782223F08100F15930 /* Frameworks */,
 				E49FD0792223F08100F15930 /* Resources */,
+				D2E090CF001A1E291EA9AE53 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -530,6 +570,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		716B7C0506A2555B71ED3C41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FXZL_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E090CF001A1E291EA9AE53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E49FD0772223F08100F15930 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -542,8 +623,10 @@
 				E4C851FD2224CAA40018A9BF /* HQMessageVC.swift in Sources */,
 				E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */,
 				E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */,
+				E4C8521722253DF40018A9BF /* HQLoginVM.swift in Sources */,
 				E4C851F92224CA880018A9BF /* HQInviteVC.swift in Sources */,
 				E4C851F52224CA760018A9BF /* HQPasswordVC.swift in Sources */,
+				E4C8521C2225416A0018A9BF /* HQNetworkManager.swift in Sources */,
 				E4C852042224CB840018A9BF /* HQNavigationController.swift in Sources */,
 				E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */,
 				E4C852152225322C0018A9BF /* NSString+Category.swift in Sources */,
@@ -691,6 +774,7 @@
 		};
 		E49FD08E2223F08200F15930 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9607DEB399DF9E9079E5174C /* Pods-FXZL_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -711,6 +795,7 @@
 		};
 		E49FD08F2223F08200F15930 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B49DB3A385A7B8EB34403017 /* Pods-FXZL_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

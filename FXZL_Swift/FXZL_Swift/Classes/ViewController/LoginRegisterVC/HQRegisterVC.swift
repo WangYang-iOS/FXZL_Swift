@@ -16,14 +16,21 @@ class HQRegisterVC: HQBaseVC {
     @IBOutlet weak var codeTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    var inviteCode = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         topSpace.constant = 44 + kNavH
         phoneTF.limitCount = 11
     }
+    @IBAction func clickCodeButton(_ sender: UIButton) {
+        view.endEditing(true)
+    }
     @IBAction func clickRegisterButton(_ sender: UIButton) {
+        view.endEditing(true)
     }
     @IBAction func clickProtocolButton(_ sender: UIButton) {
+        view.endEditing(true)
     }
     
 }

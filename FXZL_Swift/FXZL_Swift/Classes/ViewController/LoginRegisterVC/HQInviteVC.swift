@@ -18,6 +18,13 @@ class HQInviteVC: HQBaseVC {
         topSpace.constant = 44 + kNavH
     }
     @IBAction func clickInviteButton(_ sender: UIButton) {
+        view.endEditing(true)
+        if inviteTF.text?.count == 0 {
+            return
+        }
+        let registerVC = HQRegisterVC()
+        registerVC.inviteCode = inviteTF.text!
+        navigationController?.pushViewController(registerVC, animated: true)
     }
     
 }
