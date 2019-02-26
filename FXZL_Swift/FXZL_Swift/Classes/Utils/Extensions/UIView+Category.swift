@@ -86,5 +86,4 @@ extension UIView {
         layer.shadowOffset = offset
         layer.shadowOpacity = Float(opacity)
     }
-    
 }

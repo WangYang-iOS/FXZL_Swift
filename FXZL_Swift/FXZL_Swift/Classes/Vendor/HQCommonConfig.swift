@@ -24,21 +24,23 @@ let kLineH                  = 1 / UIScreen.main.scale
 func RECT(_ x:CGFloat,_ y:CGFloat,_ width:CGFloat,_ height:CGFloat) -> CGRect {
     return CGRect(x: x, y: y, width: width, height: height)
 }
-
 func SIZE(_ width:CGFloat,_ height:CGFloat) -> CGSize {
     return CGSize(width: width, height: height)
 }
-
 func POINT(_ x:CGFloat,_ y:CGFloat) -> CGPoint {
     return CGPoint(x: x, y: y)
 }
-
 func AdjustmentBehavior(_ scrollView : UIScrollView) -> Void {
     if #available(iOS 11.0, *) {
         scrollView.contentInsetAdjustmentBehavior = .never
     }
 }
-
+func PingFangSCRegular(_ size : CGFloat) -> UIFont {
+    return UIFont(name: "PingFangSC-Regular", size: size)!
+}
+func PingFangSCBold(_ size : CGFloat) -> UIFont {
+    return UIFont(name: "PingFangSC-Semibold", size: size)!
+}
 
 
 

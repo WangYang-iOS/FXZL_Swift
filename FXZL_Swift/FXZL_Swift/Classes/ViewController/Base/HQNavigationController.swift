@@ -16,7 +16,6 @@ class HQNavigationController: UINavigationController, UIGestureRecognizerDelegat
 //        setNavigationBarHidden(true, animated: false)
         navigationBar.isHidden = true
         delegate = self
-        
         if interactivePopGestureRecognizer?.delegate == nil {
             interactivePopGestureRecognizer?.delegate = self
         }

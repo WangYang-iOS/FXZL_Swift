@@ -13,6 +13,9 @@ class HQBaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        self.hq_navigation.backgroundColor = UIColor.white;
+        self.hq_navigation.leftButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        self.hq_navigation.rightButton.addTarget(self, action: #selector(clickRightButton), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +24,12 @@ class HQBaseVC: UIViewController {
     
     deinit {
         print(NSStringFromClass(self.classForCoder) + "被释放了")
+    }
+    
+    @objc func goBack() -> Void {
+        navigationController?.popViewController(animated: true)
+    }
+    @objc func clickRightButton() -> Void {
+        
     }
 }

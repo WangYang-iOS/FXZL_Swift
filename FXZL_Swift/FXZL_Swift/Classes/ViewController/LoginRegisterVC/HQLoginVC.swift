@@ -18,11 +18,15 @@ class HQLoginVC: HQBaseVC {
         super.viewDidLoad()
         topSpace.constant = 44 + kNavH
         phoneTF.limitCount = 11
+        self.hq_navigation.hiddenLeftButton = true
+        self.hq_navigation.rightButtonTitle = "注册"
     }
     @IBAction func clickLoginButton(_ sender: UIButton) {
     }
     @IBAction func clickForgetButton(_ sender: UIButton) {
         navigationController?.pushViewController(HQPasswordVC(), animated: true)
     }
-    
+    override func clickRightButton() {
+        navigationController?.pushViewController(HQInviteVC(), animated: true)
+    }
 }

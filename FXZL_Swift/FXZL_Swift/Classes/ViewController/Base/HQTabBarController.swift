@@ -28,6 +28,7 @@ class HQTabBarController: UITabBarController {
     func getNavigationController(normalImg:String,selectImg:String,title:String,vcName:String) -> HQNavigationController {
         let vc = NSClassFromString(kSpaceName + "." + vcName) as! HQBaseVC.Type
         let viewContrller = vc.init()
+        viewContrller.hq_navigation.hiddenLeftButton = true
         let nav = HQNavigationController.init(rootViewController: viewContrller)
         let tabbarItem = UITabBarItem(title: title, image: UIImage(named: normalImg)?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: selectImg)?.withRenderingMode(.alwaysOriginal))
         let selectColor = UIColor.hexString(colorString: "1E6DFF")
