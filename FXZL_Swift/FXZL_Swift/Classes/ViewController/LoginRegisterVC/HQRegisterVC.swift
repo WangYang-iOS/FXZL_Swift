@@ -16,7 +16,12 @@ class HQRegisterVC: HQBaseVC {
     @IBOutlet weak var codeTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    var inviteCode = ""
+    var inviteCode = "" {
+        didSet {
+            registerVM.invite_code = inviteCode
+        }
+    }
+    var registerVM = HQRegisterVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +30,23 @@ class HQRegisterVC: HQBaseVC {
     }
     @IBAction func clickCodeButton(_ sender: UIButton) {
         view.endEditing(true)
+        registerVM.phone = phoneTF.text ?? ""
+        registerVM.sendCodeRequest { (success) in
+            if success {
+                
+            }
+        }
     }
     @IBAction func clickRegisterButton(_ sender: UIButton) {
         view.endEditing(true)
+        registerVM.phone = phoneTF.text ?? ""
+        registerVM.code = codeTF.text ?? ""
+        registerVM.password = passwordTF.text ?? ""
+        registerVM.registerRequest { (success, responseMessage) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     @IBAction func clickProtocolButton(_ sender: UIButton) {
         view.endEditing(true)

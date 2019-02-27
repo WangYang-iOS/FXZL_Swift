@@ -8,6 +8,6 @@
 
 import UIKit
 
-class HQBaseModel: NSObject {
+class HQBaseModel: NSObject,Decodable {
 
 }

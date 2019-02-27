@@ -22,9 +22,12 @@ class HQInviteVC: HQBaseVC {
         if inviteTF.text?.count == 0 {
             return
         }
-        let registerVC = HQRegisterVC()
-        registerVC.inviteCode = inviteTF.text!
-        navigationController?.pushViewController(registerVC, animated: true)
+        HQNetworkManager.postRequest(urlString: "api/V1/Member/CheckInvitCode", params: ["invit_code":inviteTF.text!]) { [weak self] (success, responseMessage) in
+            if success {
+                let registerVC = HQRegisterVC()
+                registerVC.inviteCode = (self?.inviteTF.text)!
+                self?.navigationController?.pushViewController(registerVC, animated: true)
+            }
+        }
     }
-    
 }

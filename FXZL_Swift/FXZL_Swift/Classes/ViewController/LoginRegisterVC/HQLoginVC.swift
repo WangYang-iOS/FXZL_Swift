@@ -27,10 +27,9 @@ class HQLoginVC: HQBaseVC {
     }
     @IBAction func clickLoginButton(_ sender: UIButton) {
         view.endEditing(true)
-        loginVM.requestLoginAPi { (result) in
-            print("\(result)")
+        loginVM.requestLoginAPi { [weak self] (result) in
             if result {
-                dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
             }
         }
     }
