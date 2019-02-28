@@ -21,6 +21,8 @@
 		E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD0B02223F32A00F15930 /* HQBaseView.swift */; };
 		E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD0B92223F36800F15930 /* HQBaseModel.swift */; };
 		E49FD0BC2223F37800F15930 /* HQBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD0BB2223F37800F15930 /* HQBaseViewModel.swift */; };
+		E4AC3CDE2227D7C700974F29 /* HQMineVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC3CDD2227D7C700974F29 /* HQMineVM.swift */; };
+		E4AC3CE02227DF6D00974F29 /* HQCommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC3CDF2227DF6D00974F29 /* HQCommonHeader.swift */; };
 		E4C851E12224C92B0018A9BF /* HQCircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851DF2224C92B0018A9BF /* HQCircleVC.swift */; };
 		E4C851E22224C92B0018A9BF /* HQCircleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C851E02224C92B0018A9BF /* HQCircleVC.xib */; };
 		E4C851E52224C95E0018A9BF /* HQDemandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C851E32224C95E0018A9BF /* HQDemandVC.swift */; };
@@ -71,6 +73,8 @@
 		E49FD0B02223F32A00F15930 /* HQBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBaseView.swift; sourceTree = "<group>"; };
 		E49FD0B92223F36800F15930 /* HQBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBaseModel.swift; sourceTree = "<group>"; };
 		E49FD0BB2223F37800F15930 /* HQBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBaseViewModel.swift; sourceTree = "<group>"; };
+		E4AC3CDD2227D7C700974F29 /* HQMineVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQMineVM.swift; sourceTree = "<group>"; };
+		E4AC3CDF2227DF6D00974F29 /* HQCommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonHeader.swift; sourceTree = "<group>"; };
 		E4C851DF2224C92B0018A9BF /* HQCircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCircleVC.swift; sourceTree = "<group>"; };
 		E4C851E02224C92B0018A9BF /* HQCircleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQCircleVC.xib; sourceTree = "<group>"; };
 		E4C851E32224C95E0018A9BF /* HQDemandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandVC.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		E49FD0932223F1E900F15930 /* Macros */ = {
 			isa = PBXGroup;
 			children = (
+				E4AC3CDF2227DF6D00974F29 /* HQCommonHeader.swift */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 		E49FD0AF2223F31100F15930 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4AC3CDD2227D7C700974F29 /* HQMineVM.swift */,
 			);
 			path = MineVC;
 			sourceTree = "<group>";
@@ -620,16 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks.sh\"\n";
@@ -656,9 +653,11 @@
 				E44E24EE2226247300D65372 /* HQRequestMessage.swift in Sources */,
 				E4C8521C2225416A0018A9BF /* HQNetworkManager.swift in Sources */,
 				E4C852042224CB840018A9BF /* HQNavigationController.swift in Sources */,
+				E4AC3CDE2227D7C700974F29 /* HQMineVM.swift in Sources */,
 				E44E24F72226665F00D65372 /* HQRegisterVM.swift in Sources */,
 				E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */,
 				E4C852152225322C0018A9BF /* NSString+Category.swift in Sources */,
+				E4AC3CE02227DF6D00974F29 /* HQCommonHeader.swift in Sources */,
 				E4C8520D2224E1BB0018A9BF /* UIView+Category.swift in Sources */,
 				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
 				E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */,
