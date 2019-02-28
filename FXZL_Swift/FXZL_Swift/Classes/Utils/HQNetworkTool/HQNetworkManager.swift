@@ -12,15 +12,16 @@ import Alamofire
 class HQNetworkManager {
     class func postRequest(urlString: String, params: [String:String], callback:@escaping (_ success: Bool,_ responseMessage: HQResponseMessage) -> ()) {
         let URLString = kDomain + urlString
-        let headers = ["uid":"0",
+        print("token == " + "\(HQUser.shareUser.token ?? "")" + "\(HQUser.shareUser.uuid ?? "")")
+        let headers = ["uid":HQUser.shareUser.uuid ?? "0",
                        "version":kAppVersion,
                        "device_type":"1",
                        "sysVersion":kSystemVersion,
                        "ts":String(NSDate().timeIntervalSince1970),
-                       "token":"0"]
+                       "token":HQUser.shareUser.token ?? ""]        
         Alamofire.request(URLString, method: .post, parameters: params, headers: headers).responseJSON { (response) in
             let responseMessage = HQResponseMessage.init(url: URLString, args: params)
-            
+
             switch response.result {
                 case .success(let json):
                     print(json)

@@ -5,7 +5,7 @@ target 'FXZL_Swift' do
 use_frameworks!
 pod 'IQKeyboardManagerSwift', '~> 6.2.0'
 pod 'Alamofire', '~> 4.8.1'
-pod 'Kingfisher', '~> 5.0.0'
+pod 'Kingfisher', '~> 4.6.0'
 
 
 

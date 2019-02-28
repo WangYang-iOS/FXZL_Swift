@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class HQMineVC: HQBaseVC {
     @IBOutlet weak var scrollW: NSLayoutConstraint!
@@ -23,16 +22,21 @@ class HQMineVC: HQBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollW.constant = kScreenW
-        
+        self.hq_navigation.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         mineVM.requesetUserInfo { (success) in
             if success {
-                
+                self.resetUserInfo()
             }
         }
-        
-        func resetUserInfo() -> Void{
-            headerImgV
-        }
+    }
+    
+    func resetUserInfo() -> Void{
+        print(HQUser.shareUser.avatar)
+        headerImgV.kf.setImage(with: URL(string: HQUser.shareUser.avatar ?? ""), placeholder: UIImage(named: "ic_noLogin_header"), options: nil, progressBlock: nil, completionHandler: nil)
         
     }
     
