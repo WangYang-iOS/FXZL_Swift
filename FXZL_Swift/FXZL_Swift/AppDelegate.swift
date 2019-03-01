@@ -38,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     //自动登录
     func launchLogin() -> Void {
-        guard let phone = HQCommonTool.valueForkey(kPhoneKey) as? String,
-            let password = HQCommonTool.valueForkey(kPasswordKey) as? String else {
+        guard let phone = HQCommonMethods.valueForkey(kPhoneKey) as? String,
+            let password = HQCommonMethods.valueForkey(kPasswordKey) as? String else {
                 NotificationCenter.default.post(name: NSNotification.Name(HQLoginNotificationName), object: nil)
                 return
         }

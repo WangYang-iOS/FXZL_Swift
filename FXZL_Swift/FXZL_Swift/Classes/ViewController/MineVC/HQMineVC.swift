@@ -43,7 +43,7 @@ class HQMineVC: HQBaseVC {
     
     func resetUserInfo() -> Void {
         if HQCommonTool.isLogin() {
-            headerImgV.kf.setImage(with: URL(string: HQUser.shareUser.avatar ?? ""), placeholder: UIImage(named: "ic_noLogin_header"), options: nil, progressBlock: nil, completionHandler: nil)
+            headerImgV.hq_setImage(image: HQUser.shareUser.avatar, placeholder: "ic_noLogin_header")
             nameLabel.text = HQUser.shareUser.nickname
             if let companyName = HQUser.shareUser.company_name,
                 let positionName = HQUser.shareUser.position_name {
@@ -60,7 +60,7 @@ class HQMineVC: HQBaseVC {
     }
     
     @IBAction func clickUserButton(_ sender: UIButton) {
-        
+        navigationController?.pushViewController(HQUserInfoVC(), animated: true)
     }
     
 }

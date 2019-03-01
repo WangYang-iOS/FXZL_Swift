@@ -8,25 +8,13 @@
 
 import UIKit
 
+/// 获取用户权限
 class HQCommonTool: NSObject {
     class func isLogin() -> Bool {
         return (HQUser.shareUser.uuid?.count ?? 0) > 0
     }
+    class func isAuth() -> Bool {
+        return HQUser.shareUser.authen_state == 1
+    }
 }
 
-// MARK: - 本地读写操作
-extension HQCommonTool {
-    class func saveValue(_ key: String, _ value : Any?) -> Void {
-        if value == nil {
-            return
-        }
-        UserDefaults.standard.setValue(value, forKey: key)
-        UserDefaults.standard.synchronize()
-    }
-    class func valueForkey(_ key: String) -> Any? {
-        return UserDefaults.standard.value(forKey: key)
-    }
-    class func removeValue(_ key: String) -> Void {
-        UserDefaults.standard.removeObject(forKey: key)
-    }
-}

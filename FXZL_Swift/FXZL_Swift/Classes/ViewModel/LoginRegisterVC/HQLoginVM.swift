@@ -20,9 +20,9 @@ class HQLoginVM: HQBaseViewModel {
                 let data = try? JSONSerialization.data(withJSONObject: member_info ?? [:], options: .prettyPrinted)
                 let user = try? JSONDecoder().decode(HQUser.self, from: data!)
                 HQUser.shareUser.layoutUser(user: user)
-                HQCommonTool.saveValue(kUUIDKey, HQUser.shareUser.uuid)
-                HQCommonTool.saveValue(kPhoneKey, self.phone)
-                HQCommonTool.saveValue(kPasswordKey, self.password)
+                HQCommonMethods.saveValue(kUUIDKey, HQUser.shareUser.uuid)
+                HQCommonMethods.saveValue(kPhoneKey, self.phone)
+                HQCommonMethods.saveValue(kPasswordKey, self.password)
             }
             callback(success)
         }
