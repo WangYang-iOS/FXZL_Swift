@@ -15,7 +15,7 @@ class HQInviteVC: HQBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topSpace.constant = 44 + kNavH
+        topSpace.constant = 44 + topSpaceConstant()
     }
     @IBAction func clickInviteButton(_ sender: UIButton) {
         view.endEditing(true)

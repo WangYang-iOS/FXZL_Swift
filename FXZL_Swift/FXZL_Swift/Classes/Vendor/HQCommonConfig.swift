@@ -45,7 +45,13 @@ func PingFangSCRegular(_ size : CGFloat) -> UIFont {
 func PingFangSCBold(_ size : CGFloat) -> UIFont {
     return UIFont(name: "PingFangSC-Semibold", size: size)!
 }
-
+func topSpaceConstant() -> CGFloat {
+    if #available(iOS 11.0, *) {
+        return kNavH - kSafeTop
+    }else {
+        return kNavH
+    }
+}
 
 
 

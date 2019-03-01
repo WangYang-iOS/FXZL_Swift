@@ -19,7 +19,7 @@ class HQLoginVC: HQBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topSpace.constant = 44 + kNavH
+        topSpace.constant = 44 + topSpaceConstant()
         phoneTF.limitCount = 11
         self.hq_navigation.hiddenLeftButton = true
         self.hq_navigation.rightButtonTitle = "注册"

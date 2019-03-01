@@ -14,6 +14,8 @@
 		E44DDAD1222914F600D3E33F /* HQUserInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44DDACF222914F600D3E33F /* HQUserInfoVC.xib */; };
 		E44DDAD52229167100D3E33F /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAD42229167100D3E33F /* UIImageView+Load.swift */; };
 		E44DDAD722292A4000D3E33F /* HQCommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAD622292A4000D3E33F /* HQCommonMethods.swift */; };
+		E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAD922292E9500D3E33F /* HQSettingVC.swift */; };
+		E44DDADC22292E9500D3E33F /* HQSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44DDADA22292E9500D3E33F /* HQSettingVC.xib */; };
 		E44E24EE2226247300D65372 /* HQRequestMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24ED2226247300D65372 /* HQRequestMessage.swift */; };
 		E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24EF2226248000D65372 /* HQResponseMessage.swift */; };
 		E44E24F22226365800D65372 /* HQUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F12226365800D65372 /* HQUser.swift */; };
@@ -70,6 +72,8 @@
 		E44DDACF222914F600D3E33F /* HQUserInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQUserInfoVC.xib; sourceTree = "<group>"; };
 		E44DDAD42229167100D3E33F /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
 		E44DDAD622292A4000D3E33F /* HQCommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonMethods.swift; sourceTree = "<group>"; };
+		E44DDAD922292E9500D3E33F /* HQSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQSettingVC.swift; sourceTree = "<group>"; };
+		E44DDADA22292E9500D3E33F /* HQSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQSettingVC.xib; sourceTree = "<group>"; };
 		E44E24ED2226247300D65372 /* HQRequestMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQRequestMessage.swift; sourceTree = "<group>"; };
 		E44E24EF2226248000D65372 /* HQResponseMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQResponseMessage.swift; sourceTree = "<group>"; };
 		E44E24F12226365800D65372 /* HQUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUser.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 				E44DDACF222914F600D3E33F /* HQUserInfoVC.xib */,
 			);
 			path = BaseInfoVC;
+			sourceTree = "<group>";
+		};
+		E44DDAD822292E8400D3E33F /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				E44DDAD922292E9500D3E33F /* HQSettingVC.swift */,
+				E44DDADA22292E9500D3E33F /* HQSettingVC.xib */,
+			);
+			path = SettingVC;
 			sourceTree = "<group>";
 		};
 		E44E24F32226610900D65372 /* HQCommonTool */ = {
@@ -322,6 +335,7 @@
 		E49FD09D2223F2D000F15930 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
+				E44DDAD822292E8400D3E33F /* SettingVC */,
 				E44DDACD222914D600D3E33F /* BaseInfoVC */,
 				E4C851FF2224CAAF0018A9BF /* HQMineVC.swift */,
 				E4C852002224CAAF0018A9BF /* HQMineVC.xib */,
@@ -530,13 +544,13 @@
 		E4C852092224DCA50018A9BF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */,
-				E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */,
-				E4C8520E2224EE130018A9BF /* UITextField+LimitCount.swift */,
-				E4C8521222252CB60018A9BF /* UIViewController+HQNavigationBar.swift */,
 				E4C852142225322C0018A9BF /* NSString+Category.swift */,
 				E44DDAC92229056000D3E33F /* UIButton+Utils.swift */,
+				E4C8520A2224DCD40018A9BF /* UIColor+Hex.swift */,
 				E44DDAD42229167100D3E33F /* UIImageView+Load.swift */,
+				E4C8520E2224EE130018A9BF /* UITextField+LimitCount.swift */,
+				E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */,
+				E4C8521222252CB60018A9BF /* UIViewController+HQNavigationBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -622,6 +636,7 @@
 				E4C851E62224C95E0018A9BF /* HQDemandVC.xib in Resources */,
 				E4C851F62224CA760018A9BF /* HQPasswordVC.xib in Resources */,
 				E49FD0862223F08200F15930 /* Assets.xcassets in Resources */,
+				E44DDADC22292E9500D3E33F /* HQSettingVC.xib in Resources */,
 				E4C851FA2224CA880018A9BF /* HQInviteVC.xib in Resources */,
 				E4C852022224CAAF0018A9BF /* HQMineVC.xib in Resources */,
 			);
@@ -678,6 +693,7 @@
 				E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */,
 				E4C8521722253DF40018A9BF /* HQLoginVM.swift in Sources */,
 				E44DDAD0222914F600D3E33F /* HQUserInfoVC.swift in Sources */,
+				E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */,
 				E4C851F92224CA880018A9BF /* HQInviteVC.swift in Sources */,
 				E4C851F52224CA760018A9BF /* HQPasswordVC.swift in Sources */,
 				E44E24EE2226247300D65372 /* HQRequestMessage.swift in Sources */,

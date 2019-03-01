@@ -25,7 +25,7 @@ class HQRegisterVC: HQBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topSpace.constant = 44 + kNavH
+        topSpace.constant = 44 + topSpaceConstant()
         phoneTF.limitCount = 11
     }
     @IBAction func clickCodeButton(_ sender: UIButton) {
