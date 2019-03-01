@@ -16,6 +16,7 @@
 		E44DDAD722292A4000D3E33F /* HQCommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAD622292A4000D3E33F /* HQCommonMethods.swift */; };
 		E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAD922292E9500D3E33F /* HQSettingVC.swift */; };
 		E44DDADC22292E9500D3E33F /* HQSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44DDADA22292E9500D3E33F /* HQSettingVC.xib */; };
+		E44DDAE1222934FA00D3E33F /* UITableView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAE0222934FA00D3E33F /* UITableView+Methods.swift */; };
 		E44E24EE2226247300D65372 /* HQRequestMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24ED2226247300D65372 /* HQRequestMessage.swift */; };
 		E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24EF2226248000D65372 /* HQResponseMessage.swift */; };
 		E44E24F22226365800D65372 /* HQUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F12226365800D65372 /* HQUser.swift */; };
@@ -74,6 +75,7 @@
 		E44DDAD622292A4000D3E33F /* HQCommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonMethods.swift; sourceTree = "<group>"; };
 		E44DDAD922292E9500D3E33F /* HQSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQSettingVC.swift; sourceTree = "<group>"; };
 		E44DDADA22292E9500D3E33F /* HQSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQSettingVC.xib; sourceTree = "<group>"; };
+		E44DDAE0222934FA00D3E33F /* UITableView+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Methods.swift"; sourceTree = "<group>"; };
 		E44E24ED2226247300D65372 /* HQRequestMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQRequestMessage.swift; sourceTree = "<group>"; };
 		E44E24EF2226248000D65372 /* HQResponseMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQResponseMessage.swift; sourceTree = "<group>"; };
 		E44E24F12226365800D65372 /* HQUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUser.swift; sourceTree = "<group>"; };
@@ -169,6 +171,13 @@
 			path = SettingVC;
 			sourceTree = "<group>";
 		};
+		E44DDADD2229348C00D3E33F /* HQProtocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HQProtocol;
+			sourceTree = "<group>";
+		};
 		E44E24F32226610900D65372 /* HQCommonTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +249,7 @@
 		E49FD0922223F1E900F15930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E44DDADD2229348C00D3E33F /* HQProtocol */,
 				E44E24F32226610900D65372 /* HQCommonTool */,
 				E4C8521822253F9B0018A9BF /* HQNetworkTool */,
 				E4C852092224DCA50018A9BF /* Extensions */,
@@ -551,6 +561,7 @@
 				E4C8520E2224EE130018A9BF /* UITextField+LimitCount.swift */,
 				E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */,
 				E4C8521222252CB60018A9BF /* UIViewController+HQNavigationBar.swift */,
+				E44DDAE0222934FA00D3E33F /* UITableView+Methods.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -709,6 +720,7 @@
 				E44DDAD722292A4000D3E33F /* HQCommonMethods.swift in Sources */,
 				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
 				E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */,
+				E44DDAE1222934FA00D3E33F /* UITableView+Methods.swift in Sources */,
 				E4C851E92224C96A0018A9BF /* HQHomeVC.swift in Sources */,
 				E44E24F22226365800D65372 /* HQUser.swift in Sources */,
 				E4C85211222526910018A9BF /* HQNavigationBar.swift in Sources */,
