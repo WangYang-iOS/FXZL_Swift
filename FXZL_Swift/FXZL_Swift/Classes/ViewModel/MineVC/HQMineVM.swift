@@ -9,7 +9,6 @@
 import UIKit
 
 class HQMineVM: HQBaseViewModel {
-
     func requesetUserInfo(callback: @escaping (_ success: Bool)->()) -> Void {
         if HQUser.shareUser.uuid?.count == 0 {
             return

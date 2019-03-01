@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController = HQTabBarController()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(goLogin), name: NSNotification.Name(HQLoginNotificationName), object: nil)
+        
+        self.launchLogin()
+
         return true
     }
 
@@ -25,5 +29,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {}
     func applicationDidBecomeActive(_ application: UIApplication) {}
     func applicationWillTerminate(_ application: UIApplication) {}
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
+extension AppDelegate {
+    //自动登录
+    func launchLogin() -> Void {
+        guard let phone = HQCommonTool.valueForkey(kPhoneKey) as? String,
+            let password = HQCommonTool.valueForkey(kPasswordKey) as? String else {
+                NotificationCenter.default.post(name: NSNotification.Name(HQLoginNotificationName), object: nil)
+                return
+        }
+        let loginVM = HQLoginVM()
+        loginVM.phone = phone
+        loginVM.password = password
+        loginVM.requestLoginAPi { (success) in
+            if success {
+                NotificationCenter.default.post(name: NSNotification.Name(HQLoginNotificationName), object: nil)
+            }
+        }
+    }
+    //强制登录
+    @objc func goLogin() -> Void {
+        if !HQCommonTool.isLogin() {
+            window?.rootViewController?.present(HQNavigationController(rootViewController: HQLoginVC()), animated: true, completion: nil)
+        }
+    }
+}

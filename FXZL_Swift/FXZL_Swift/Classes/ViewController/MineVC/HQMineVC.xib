@@ -12,13 +12,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQMineVC" customModule="FXZL_Swift" customModuleProvider="target">
             <connections>
+                <outlet property="bottomSpace" destination="x5f-FU-hcS" id="URA-36-Exv"/>
                 <outlet property="contentH" destination="URr-cf-yWa" id="hOg-hg-UaV"/>
                 <outlet property="contentView" destination="2ks-V3-m3S" id="e4E-mT-0ah"/>
                 <outlet property="headerImgV" destination="ibL-rS-3Wy" id="dJ5-8p-Hpx"/>
                 <outlet property="logoIcon" destination="GSY-1A-xJy" id="zrf-WR-TV6"/>
                 <outlet property="nameLabel" destination="TaP-JI-z9m" id="dbX-rP-pL5"/>
                 <outlet property="positionLabel" destination="EyD-EX-hB8" id="IqU-UL-9tR"/>
+                <outlet property="scrollView" destination="G7E-GO-lgU" id="40q-b4-vuQ"/>
                 <outlet property="scrollW" destination="clI-BM-uyZ" id="dec-pd-qyb"/>
+                <outlet property="topSpace" destination="eSn-8z-mUo" id="qLO-2D-ado"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -125,7 +128,7 @@
                                             <color key="textColor" red="0.96078431369999995" green="0.84705882349999995" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_appstore_check" translatesAutoresizingMaskIntoConstraints="NO" id="cVC-qn-Ygh">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_appstore_check" translatesAutoresizingMaskIntoConstraints="NO" id="cVC-qn-Ygh">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="90"/>
                                         </imageView>
                                     </subviews>

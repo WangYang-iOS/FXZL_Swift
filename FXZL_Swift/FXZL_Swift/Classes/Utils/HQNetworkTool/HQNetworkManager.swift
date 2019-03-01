@@ -13,7 +13,7 @@ class HQNetworkManager {
     class func postRequest(urlString: String, params: [String:String], callback:@escaping (_ success: Bool,_ responseMessage: HQResponseMessage) -> ()) {
         let URLString = kDomain + urlString
         print("token == " + "\(HQUser.shareUser.token ?? "")" + "\(HQUser.shareUser.uuid ?? "")")
-        let headers = ["uid":HQUser.shareUser.uuid ?? "0",
+        let headers = ["uuid":HQUser.shareUser.uuid ?? "0",
                        "version":kAppVersion,
                        "device_type":"1",
                        "sysVersion":kSystemVersion,
@@ -31,11 +31,11 @@ class HQNetworkManager {
                     responseMessage.retCode = String(code ?? 1)
                     responseMessage.errorMessage = msg ?? ""
                     if code == 0 {
-                        responseMessage.responseState = .HQResponseStateSuccess
+                        responseMessage.responseState = .success
                         responseMessage.responseObject = dic["data"]
                         callback(true,responseMessage)
                     }else {
-                        responseMessage.responseState = .HQResponseStateFail
+                        responseMessage.responseState = .fail
                         callback(false,responseMessage)
                     }
                 case .failure(let error):

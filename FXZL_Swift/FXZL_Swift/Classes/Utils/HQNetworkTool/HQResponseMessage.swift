@@ -9,9 +9,9 @@
 import Foundation
 
 enum HQResponseState : String {
-    case HQResponseStateSuccess     = "Success"
-    case HQResponseStateFail        = "Fail"
-    case HQResponseStateNoFinish    = "NoFinish"
+    case success     = "Success"
+    case fail        = "Fail"
+    case noFinish    = "NoFinish"
 }
 
 class HQResponseMessage {
@@ -20,7 +20,7 @@ class HQResponseMessage {
     var responseObject : Any?
     var retCode = ""
     var errorMessage = ""
-    var responseState : HQResponseState = .HQResponseStateNoFinish
+    var responseState : HQResponseState = .noFinish
     
     init(url: String, args:[String:Any]) {
         requestUrl = url

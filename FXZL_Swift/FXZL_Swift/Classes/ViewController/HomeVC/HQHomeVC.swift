@@ -16,9 +16,6 @@ class HQHomeVC: HQBaseVC {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !HQCommonTool.isLogin() {
-            present(HQNavigationController(rootViewController: HQLoginVC()), animated: true, completion: nil)
-        }
+        
     }
-    
 }

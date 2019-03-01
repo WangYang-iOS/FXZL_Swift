@@ -14,6 +14,7 @@ class HQBaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        automaticallyAdjustsScrollViewInsets = false
         self.hq_navigation.backgroundColor = UIColor.white;
         self.hq_navigation.leftButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         self.hq_navigation.rightButton.addTarget(self, action: #selector(clickRightButton), for: .touchUpInside)
