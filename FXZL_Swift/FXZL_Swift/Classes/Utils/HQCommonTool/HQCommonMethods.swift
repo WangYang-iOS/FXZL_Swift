@@ -78,7 +78,7 @@ extension HQCommonMethods {
             alertVC.addAction(sureAction)
         }
         if let cancelButtonTitle = cancelButtonTitle {
-            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .default) { (action) in
+            let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .cancel) { (action) in
                 cancelBlock()
             }
             cancelAction.setValue(UIColor.hexString(colorString: "0f0f0f"), forKey: "titleTextColor")

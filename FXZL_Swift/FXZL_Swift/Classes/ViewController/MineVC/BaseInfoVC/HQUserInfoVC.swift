@@ -35,9 +35,7 @@ class HQUserInfoVC: HQBaseVC {
         if HQCommonTool.isAuth() {
             return
         }
-        HQCommonMethods.showSheetView(title: "请选择性别", message: nil, cancelButtonTitle: "取消", buttontitles: ["男","女"], cancelBlock: {
-            //
-        }) { (action) in
+        HQCommonMethods.showSheetView(title: "请选择性别", message: nil, cancelButtonTitle: "取消", buttontitles: ["男","女"], cancelBlock: {}) { (action) in
             self.sexTF.text = action.title
         }
     }
