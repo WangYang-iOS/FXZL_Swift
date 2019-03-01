@@ -111,6 +111,28 @@ extension HQMineVC {
     
     @objc func clickCenterItem(_ button : UIButton) -> Void {
         //
+        if !HQCommonTool.isLogin() {
+            return
+        }
+        switch button.tag - 1000 {
+        case 0:
+            //
+            break
+        case 1:
+            //
+            break
+        case 2:
+            //
+            break
+        case 3:
+            //
+            break
+        case 4:
+            navigationController?.pushViewController(HQSettingVC(), animated: true)
+            break
+        default:
+            break
+        }
     }
 }
 

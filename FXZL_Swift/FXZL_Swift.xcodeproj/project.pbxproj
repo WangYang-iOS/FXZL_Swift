@@ -17,6 +17,8 @@
 		E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAD922292E9500D3E33F /* HQSettingVC.swift */; };
 		E44DDADC22292E9500D3E33F /* HQSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44DDADA22292E9500D3E33F /* HQSettingVC.xib */; };
 		E44DDAE1222934FA00D3E33F /* UITableView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAE0222934FA00D3E33F /* UITableView+Methods.swift */; };
+		E44DDAE5222936F400D3E33F /* HQSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAE3222936F400D3E33F /* HQSettingCell.swift */; };
+		E44DDAE6222936F400D3E33F /* HQSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44DDAE4222936F400D3E33F /* HQSettingCell.xib */; };
 		E44E24EE2226247300D65372 /* HQRequestMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24ED2226247300D65372 /* HQRequestMessage.swift */; };
 		E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24EF2226248000D65372 /* HQResponseMessage.swift */; };
 		E44E24F22226365800D65372 /* HQUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F12226365800D65372 /* HQUser.swift */; };
@@ -76,6 +78,8 @@
 		E44DDAD922292E9500D3E33F /* HQSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQSettingVC.swift; sourceTree = "<group>"; };
 		E44DDADA22292E9500D3E33F /* HQSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQSettingVC.xib; sourceTree = "<group>"; };
 		E44DDAE0222934FA00D3E33F /* UITableView+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Methods.swift"; sourceTree = "<group>"; };
+		E44DDAE3222936F400D3E33F /* HQSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQSettingCell.swift; sourceTree = "<group>"; };
+		E44DDAE4222936F400D3E33F /* HQSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQSettingCell.xib; sourceTree = "<group>"; };
 		E44E24ED2226247300D65372 /* HQRequestMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQRequestMessage.swift; sourceTree = "<group>"; };
 		E44E24EF2226248000D65372 /* HQResponseMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQResponseMessage.swift; sourceTree = "<group>"; };
 		E44E24F12226365800D65372 /* HQUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUser.swift; sourceTree = "<group>"; };
@@ -176,6 +180,15 @@
 			children = (
 			);
 			path = HQProtocol;
+			sourceTree = "<group>";
+		};
+		E44DDAE2222936CB00D3E33F /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				E44DDAE3222936F400D3E33F /* HQSettingCell.swift */,
+				E44DDAE4222936F400D3E33F /* HQSettingCell.xib */,
+			);
+			path = SettingVC;
 			sourceTree = "<group>";
 		};
 		E44E24F32226610900D65372 /* HQCommonTool */ = {
@@ -428,6 +441,7 @@
 		E49FD0A62223F30700F15930 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
+				E44DDAE2222936CB00D3E33F /* SettingVC */,
 			);
 			path = MineVC;
 			sourceTree = "<group>";
@@ -642,6 +656,7 @@
 				E4C851F22224CA690018A9BF /* HQRegisterVC.xib in Resources */,
 				E4C851FE2224CAA40018A9BF /* HQMessageVC.xib in Resources */,
 				E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */,
+				E44DDAE6222936F400D3E33F /* HQSettingCell.xib in Resources */,
 				E4C851E22224C92B0018A9BF /* HQCircleVC.xib in Resources */,
 				E44DDAD1222914F600D3E33F /* HQUserInfoVC.xib in Resources */,
 				E4C851E62224C95E0018A9BF /* HQDemandVC.xib in Resources */,
@@ -712,6 +727,7 @@
 				E44DDACC22290D1700D3E33F /* HQCommonKeys.swift in Sources */,
 				E4C852042224CB840018A9BF /* HQNavigationController.swift in Sources */,
 				E4AC3CDE2227D7C700974F29 /* HQMineVM.swift in Sources */,
+				E44DDAE5222936F400D3E33F /* HQSettingCell.swift in Sources */,
 				E44E24F72226665F00D65372 /* HQRegisterVM.swift in Sources */,
 				E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */,
 				E4C852152225322C0018A9BF /* NSString+Category.swift in Sources */,
