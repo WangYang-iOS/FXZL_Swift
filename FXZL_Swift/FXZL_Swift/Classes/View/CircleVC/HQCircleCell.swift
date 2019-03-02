@@ -8,17 +8,53 @@
 
 import UIKit
 
-class HQCircleCell: UITableViewCell {
+class HQCircleCell: UITableViewCell, HQProtocol {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var dataArray: [HQCircleModel]? {
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        collectionView.register(UINib.init(nibName: "HQCirclePartCell", bundle: nil), forCellWithReuseIdentifier: "HQCirclePartCell")
+        collectionView.reloadData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+}
 
-        // Configure the view for the selected state
+extension HQCircleCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    // MARK: - UICollectionViewDataSource
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataArray?.count ?? 0
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HQCirclePartCell", for: indexPath) as? HQCirclePartCell
+        let circleModel = dataArray![indexPath.row]
+        cell?.layoutCell(headerURL: circleModel.icon, name: circleModel.name, number: "\(circleModel.member_num ?? 0)" + "位老板")
+        return cell!
+    }
+    
+    // MARK: - UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return SIZE(144, 185)
     }
     
 }

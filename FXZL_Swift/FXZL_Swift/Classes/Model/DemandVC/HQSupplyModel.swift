@@ -32,4 +32,7 @@ struct HQSupplyModel: Codable {
     
     var is_friend: Int?
     var isSelected: Bool?
+    
+    var cellHeight: CGFloat?
+    
 }

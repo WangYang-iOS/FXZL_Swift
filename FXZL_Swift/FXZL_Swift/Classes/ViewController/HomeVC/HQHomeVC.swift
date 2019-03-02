@@ -36,9 +36,11 @@ class HQHomeVC: HQBaseVC {
         self.hq_navigation.titleView = searchButton
         self.hq_navigation.removeNavigationBarBottomLine(true)
         bottomSpace.constant = KTabH + kSafeBottom
+//        tableView.isHidden = true
         tableView.estimatedHeight()
         tableView.registerCellNib("HQUserInfoCell")
-        self.headerView.backgroundColor = UIColor.red
+        tableView.registerCellNib("HQDemandCell")
+        HQCircleCell.registerCellNib(tableView: tableView)
         self.headerView.frame = RECT(0, 0, kScreenW, 9 / 16.0 * kScreenW)
         
         requestHomeData()
@@ -48,24 +50,70 @@ class HQHomeVC: HQBaseVC {
 extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.homeVM.homeModel?.members?.count ?? 0
+        switch section {
+        case 0:
+            return self.homeVM.homeModel?.members?.count ?? 0
+        case 1:
+            if let circles = self.homeVM.homeModel?.circles, circles.count == 0 {
+                return 0
+            }else {
+                return 1
+            }
+        case 2:
+            return self.homeVM.homeModel?.supply_demands?.count ?? 0
+        default:
+            return 0
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HQUserInfoCell", for: indexPath) as? HQUserInfoCell
-        let memberModel = self.homeVM.homeModel?.members![indexPath.row]
-        cell?.layoutCell(headerURL: memberModel?.avatar,
-                         name: memberModel?.nickname,
-                         position: memberModel?.position_name,
-                         companyName: memberModel?.company_name,
-                         industry: memberModel?.industry_name,
-                         isVip: memberModel?.vip_state == 1,
-                         isCer: memberModel?.authen_state == "1",
-                         isFriend: memberModel?.is_friend == 1,
-                         isSelf: memberModel?.uuid == HQUser.shareUser.uuid)
-        return cell!
+        switch indexPath.section {
+        case 0:
+            //
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HQUserInfoCell", for: indexPath) as? HQUserInfoCell
+            let memberModel = self.homeVM.homeModel?.members![indexPath.row]
+            cell?.layoutCell(headerURL: memberModel?.avatar,
+                             name: memberModel?.nickname,
+                             position: memberModel?.position_name,
+                             companyName: memberModel?.company_name,
+                             industry: memberModel?.industry_name,
+                             isVip: memberModel?.vip_state == 1,
+                             isCer: memberModel?.authen_state == "1",
+                             isFriend: memberModel?.is_friend == 1,
+                             isSelf: memberModel?.uuid == HQUser.shareUser.uuid)
+            return cell!
+        case 1:
+            //
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HQCircleCell", for: indexPath) as? HQCircleCell
+            cell?.dataArray = self.homeVM.homeModel?.circles
+            return cell!
+        case 2:
+            //
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HQDemandCell", for: indexPath) as? HQDemandCell
+            let supplyModel = self.homeVM.homeModel?.supply_demands![indexPath.row]
+            cell?.layoutCellUserInfo(headerURL: supplyModel?.avatar,
+                                     name: supplyModel?.nickname,
+                                     position: supplyModel?.position_name,
+                                     companyName: supplyModel?.company_name,
+                                     isVip: supplyModel?.vip_state == 1,
+                                     isCer: true,
+                                     isFriend: supplyModel?.is_friend == 1,
+                                     isSelf: supplyModel?.uuid == HQUser.shareUser.uuid)
+            
+            var time = supplyModel?.create_dt ?? "" + " · " + "\(supplyModel?.view_num ?? 0)"
+            time = time + "人浏览 · " + "\(supplyModel?.contact_num ?? 0)" + "人联系"
+            cell?.layoutCellSuppleyDemand(supplyType: supplyModel?.supply_type,
+                                          supplyContent: supplyModel?.supply_content,
+                                          demandType: supplyModel?.demand_type,
+                                          demandContent: supplyModel?.demand_content,
+                                          time: time)
+            return cell!
+        
+        default:
+            return UITableViewCell()
+        }
     }
     
     // MARK: - UITableViewDelegate
@@ -73,7 +121,19 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
         //
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return HQUserInfoCell.cellHeightWithModel(memberModel: self.homeVM.homeModel?.members![indexPath.row])
+        switch indexPath.section {
+        case 0:
+            return HQUserInfoCell.cellHeightWithModel(memberModel: self.homeVM.homeModel?.members![indexPath.row])
+        case 1:
+            if let circles = self.homeVM.homeModel?.circles, circles.count == 0 {
+                return 0.01
+            }
+            return 225
+        case 2:
+            return HQDemandCell.cellHeightWithModel(supplyModel: self.homeVM.homeModel?.supply_demands![indexPath.row])
+        default:
+            return 0.01
+        }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.01
@@ -95,8 +155,13 @@ extension HQHomeVC {
         self.homeVM.requestHomeInfo {[weak self] (success) in
             let bannerModel = self?.homeVM.homeModel?.banners?.first
             self?.headerImgV.hq_setImage(image: bannerModel?.pic, placeholder: nil)
+            self?.tableView.isHidden = false
             self?.tableView.reloadData()
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 

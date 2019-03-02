@@ -31,6 +31,10 @@ class HQNavigationController: UINavigationController, UIGestureRecognizerDelegat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .default
+    }
 }
 
 extension HQNavigationController : UINavigationControllerDelegate {

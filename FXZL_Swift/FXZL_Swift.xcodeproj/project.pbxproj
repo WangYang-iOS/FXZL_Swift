@@ -18,6 +18,8 @@
 		E40C1DE6222A4EEE0022CEDA /* HQCircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40C1DE4222A4EEE0022CEDA /* HQCircleCell.xib */; };
 		E40C1DE9222A4EFC0022CEDA /* HQDemandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C1DE7222A4EFC0022CEDA /* HQDemandCell.swift */; };
 		E40C1DEA222A4EFC0022CEDA /* HQDemandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40C1DE8222A4EFC0022CEDA /* HQDemandCell.xib */; };
+		E40C1DED222A63220022CEDA /* HQCirclePartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C1DEB222A63220022CEDA /* HQCirclePartCell.swift */; };
+		E40C1DEE222A63220022CEDA /* HQCirclePartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40C1DEC222A63220022CEDA /* HQCirclePartCell.xib */; };
 		E4266B93222A132000D1B0D8 /* HQHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B92222A132000D1B0D8 /* HQHomeVM.swift */; };
 		E4266B95222A133000D1B0D8 /* HQMessageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B94222A133000D1B0D8 /* HQMessageVM.swift */; };
 		E4266B97222A133A00D1B0D8 /* HQDemandVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B96222A133A00D1B0D8 /* HQDemandVM.swift */; };
@@ -97,6 +99,8 @@
 		E40C1DE4222A4EEE0022CEDA /* HQCircleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQCircleCell.xib; sourceTree = "<group>"; };
 		E40C1DE7222A4EFC0022CEDA /* HQDemandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandCell.swift; sourceTree = "<group>"; };
 		E40C1DE8222A4EFC0022CEDA /* HQDemandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQDemandCell.xib; sourceTree = "<group>"; };
+		E40C1DEB222A63220022CEDA /* HQCirclePartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCirclePartCell.swift; sourceTree = "<group>"; };
+		E40C1DEC222A63220022CEDA /* HQCirclePartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQCirclePartCell.xib; sourceTree = "<group>"; };
 		E4266B92222A132000D1B0D8 /* HQHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQHomeVM.swift; sourceTree = "<group>"; };
 		E4266B94222A133000D1B0D8 /* HQMessageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQMessageVM.swift; sourceTree = "<group>"; };
 		E4266B96222A133A00D1B0D8 /* HQDemandVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandVM.swift; sourceTree = "<group>"; };
@@ -447,6 +451,8 @@
 			children = (
 				E40C1DE3222A4EEE0022CEDA /* HQCircleCell.swift */,
 				E40C1DE4222A4EEE0022CEDA /* HQCircleCell.xib */,
+				E40C1DEB222A63220022CEDA /* HQCirclePartCell.swift */,
+				E40C1DEC222A63220022CEDA /* HQCirclePartCell.xib */,
 			);
 			path = CircleVC;
 			sourceTree = "<group>";
@@ -686,6 +692,7 @@
 				E4C851EE2224CA5C0018A9BF /* HQLoginVC.xib in Resources */,
 				E4C851F22224CA690018A9BF /* HQRegisterVC.xib in Resources */,
 				E4C851FE2224CAA40018A9BF /* HQMessageVC.xib in Resources */,
+				E40C1DEE222A63220022CEDA /* HQCirclePartCell.xib in Resources */,
 				E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */,
 				E44DDAE6222936F400D3E33F /* HQSettingCell.xib in Resources */,
 				E40C1DE0222A2A250022CEDA /* HQUserInfoCell.xib in Resources */,
@@ -774,6 +781,7 @@
 				E40C1DDC222A23970022CEDA /* HQSupplyModel.swift in Sources */,
 				E4C8520D2224E1BB0018A9BF /* UIView+Category.swift in Sources */,
 				E40C1DE2222A4EB00022CEDA /* HQProtocol.swift in Sources */,
+				E40C1DED222A63220022CEDA /* HQCirclePartCell.swift in Sources */,
 				E44DDAD722292A4000D3E33F /* HQCommonMethods.swift in Sources */,
 				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
 				E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */,
