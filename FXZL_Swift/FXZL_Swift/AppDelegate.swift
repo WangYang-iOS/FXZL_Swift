@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = HQTabBarController()
         
         NotificationCenter.default.addObserver(self, selector: #selector(goLogin), name: NSNotification.Name(HQLoginNotificationName), object: nil)
-        
         self.launchLogin()
 
         return true
