@@ -22,6 +22,7 @@ let kSafeTop : CGFloat      = kScreenH >= 812.0 ? 24.0 : 0.0
 let kSafeBottom : CGFloat   = kScreenH >= 812.0 ? 34.0 : 0.0
 let kNavH : CGFloat         = kScreenH >= 812.0 ? 88.0 : 64.0
 let KTabH : CGFloat         = 49
+let kStatusH: CGFloat       = kScreenH >= 812.0 ? 44.0 : 20.0
 
 let kLineH                  = 1 / UIScreen.main.scale
 
@@ -47,7 +48,7 @@ func PingFangSCBold(_ size : CGFloat) -> UIFont {
 }
 func topSpaceConstant() -> CGFloat {
     if #available(iOS 11.0, *) {
-        return kNavH - kSafeTop
+        return kNavH - kStatusH
     }else {
         return kNavH
     }

@@ -36,12 +36,13 @@ class HQHomeVC: HQBaseVC {
         self.hq_navigation.titleView = searchButton
         self.hq_navigation.removeNavigationBarBottomLine(true)
         bottomSpace.constant = KTabH + kSafeBottom
-//        tableView.isHidden = true
+        tableView.isHidden = true
         tableView.estimatedHeight()
         tableView.registerCellNib("HQUserInfoCell")
         tableView.registerCellNib("HQDemandCell")
+        tableView.registerHeaderFooterNib("HQHomeHeaderView")
         HQCircleCell.registerCellNib(tableView: tableView)
-        self.headerView.frame = RECT(0, 0, kScreenW, 9 / 16.0 * kScreenW)
+        AdjustmentBehavior(tableView)
         
         requestHomeData()
     }
@@ -135,8 +136,32 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
             return 0.01
         }
     }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HQHomeHeaderView") as? HQHomeHeaderView
+        headerView?.contentView.backgroundColor = UIColor.white
+        headerView?.moreButton.isHidden = false
+        switch section {
+        case 0:
+            //
+            headerView?.layoutHeaderView(title: "推荐去认识")
+            headerView?.moreButton.isHidden = true
+            break
+        case 1:
+            //
+            headerView?.layoutHeaderView(title: "推荐圈子")
+            break
+        case 2:
+            //
+            headerView?.layoutHeaderView(title: "供需雷达")
+            break
+        default:
+            break
+        }
+        
+        return headerView
+    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.01
+        return 60
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
@@ -153,8 +178,14 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
 extension HQHomeVC {
     func requestHomeData() -> Void {
         self.homeVM.requestHomeInfo {[weak self] (success) in
-            let bannerModel = self?.homeVM.homeModel?.banners?.first
-            self?.headerImgV.hq_setImage(image: bannerModel?.pic, placeholder: nil)
+            if let banners = self?.homeVM.homeModel?.banners, banners.count > 0 {
+                self?.headerView.frame = RECT(0, 0, kScreenW, 9 / 16.0 * kScreenW)
+                let bannerModel = self?.homeVM.homeModel?.banners?.first
+                self?.headerImgV.hq_setImage(image: bannerModel?.pic, placeholder: nil)
+            }else {
+                self?.headerView.frame = RECT(0, 0, kScreenW, 0)
+            }
+            
             self?.tableView.isHidden = false
             self?.tableView.reloadData()
         }

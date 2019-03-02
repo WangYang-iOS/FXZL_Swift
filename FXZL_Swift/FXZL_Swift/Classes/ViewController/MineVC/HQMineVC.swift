@@ -25,7 +25,7 @@ class HQMineVC: HQBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollW.constant = kScreenW
-        topSpace.constant = topSpaceConstant()
+        topSpace.constant = kNavH
         AdjustmentBehavior(scrollView)
         self.hq_navigation.isHidden = true
         resetUserInfo()

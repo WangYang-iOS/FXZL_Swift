@@ -54,7 +54,11 @@ extension HQCircleCell: UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return SIZE(144, 185)
+        let padding: CGFloat = 15;
+        let space: CGFloat = 12;
+        let width: CGFloat = (kScreenW - padding - space * 2) / 2.5;
+        let height: CGFloat = 185;
+        return SIZE(width, height);
     }
     
 }
