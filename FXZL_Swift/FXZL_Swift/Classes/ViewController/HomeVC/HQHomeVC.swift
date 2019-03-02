@@ -15,6 +15,7 @@ class HQHomeVC: HQBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedHeight()
+        tableView.registerCellClass("UITableViewCell")
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -32,7 +33,7 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         return cell
     }
     

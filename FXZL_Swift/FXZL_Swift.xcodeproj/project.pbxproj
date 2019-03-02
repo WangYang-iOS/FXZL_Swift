@@ -239,9 +239,6 @@
 			children = (
 				E49FD07E2223F08100F15930 /* AppDelegate.swift */,
 				E49FD0902223F1E900F15930 /* Classes */,
-				E49FD0852223F08200F15930 /* Assets.xcassets */,
-				E49FD0872223F08200F15930 /* LaunchScreen.storyboard */,
-				E49FD08A2223F08200F15930 /* Info.plist */,
 			);
 			path = FXZL_Swift;
 			sourceTree = "<group>";
@@ -324,6 +321,9 @@
 		E49FD0962223F1E900F15930 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E49FD0852223F08200F15930 /* Assets.xcassets */,
+				E49FD0872223F08200F15930 /* LaunchScreen.storyboard */,
+				E49FD08A2223F08200F15930 /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -911,7 +911,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MF5828SVH4;
-				INFOPLIST_FILE = FXZL_Swift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FXZL_Swift/Classes/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -932,7 +932,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MF5828SVH4;
-				INFOPLIST_FILE = FXZL_Swift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FXZL_Swift/Classes/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
