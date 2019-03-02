@@ -12,6 +12,10 @@
 		E4266B95222A133000D1B0D8 /* HQMessageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B94222A133000D1B0D8 /* HQMessageVM.swift */; };
 		E4266B97222A133A00D1B0D8 /* HQDemandVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B96222A133A00D1B0D8 /* HQDemandVM.swift */; };
 		E4266B99222A134700D1B0D8 /* HQCircleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B98222A134700D1B0D8 /* HQCircleVM.swift */; };
+		E4266B9B222A13C500D1B0D8 /* HQBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B9A222A13C500D1B0D8 /* HQBannerModel.swift */; };
+		E4266B9D222A13CF00D1B0D8 /* HQHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B9C222A13CF00D1B0D8 /* HQHomeModel.swift */; };
+		E4266B9F222A13E800D1B0D8 /* HQKindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B9E222A13E800D1B0D8 /* HQKindModel.swift */; };
+		E4266BA1222A13FD00D1B0D8 /* HQNotificateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266BA0222A13FD00D1B0D8 /* HQNotificateModel.swift */; };
 		E44DDACA2229056000D3E33F /* UIButton+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDAC92229056000D3E33F /* UIButton+Utils.swift */; };
 		E44DDACC22290D1700D3E33F /* HQCommonKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDACB22290D1700D3E33F /* HQCommonKeys.swift */; };
 		E44DDAD0222914F600D3E33F /* HQUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDACE222914F600D3E33F /* HQUserInfoVC.swift */; };
@@ -77,6 +81,10 @@
 		E4266B94222A133000D1B0D8 /* HQMessageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQMessageVM.swift; sourceTree = "<group>"; };
 		E4266B96222A133A00D1B0D8 /* HQDemandVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandVM.swift; sourceTree = "<group>"; };
 		E4266B98222A134700D1B0D8 /* HQCircleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCircleVM.swift; sourceTree = "<group>"; };
+		E4266B9A222A13C500D1B0D8 /* HQBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQBannerModel.swift; sourceTree = "<group>"; };
+		E4266B9C222A13CF00D1B0D8 /* HQHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQHomeModel.swift; sourceTree = "<group>"; };
+		E4266B9E222A13E800D1B0D8 /* HQKindModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQKindModel.swift; sourceTree = "<group>"; };
+		E4266BA0222A13FD00D1B0D8 /* HQNotificateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQNotificateModel.swift; sourceTree = "<group>"; };
 		E44DDAC92229056000D3E33F /* UIButton+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Utils.swift"; sourceTree = "<group>"; };
 		E44DDACB22290D1700D3E33F /* HQCommonKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonKeys.swift; sourceTree = "<group>"; };
 		E44DDACE222914F600D3E33F /* HQUserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserInfoVC.swift; sourceTree = "<group>"; };
@@ -293,7 +301,6 @@
 				E49FD0B32223F34C00F15930 /* CircleVC */,
 				E49FD0B62223F34C00F15930 /* DemandVC */,
 				E49FD0B42223F34C00F15930 /* HomeVC */,
-				E49FD0B52223F34C00F15930 /* LoginRegisterVC */,
 				E49FD0B82223F34C00F15930 /* MessageVC */,
 				E49FD0B22223F34C00F15930 /* MineVC */,
 			);
@@ -544,20 +551,16 @@
 		E49FD0B42223F34C00F15930 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4266B9A222A13C500D1B0D8 /* HQBannerModel.swift */,
+				E4266B9C222A13CF00D1B0D8 /* HQHomeModel.swift */,
 			);
 			path = HomeVC;
-			sourceTree = "<group>";
-		};
-		E49FD0B52223F34C00F15930 /* LoginRegisterVC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginRegisterVC;
 			sourceTree = "<group>";
 		};
 		E49FD0B62223F34C00F15930 /* DemandVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4266B9E222A13E800D1B0D8 /* HQKindModel.swift */,
 			);
 			path = DemandVC;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 		E49FD0B82223F34C00F15930 /* MessageVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4266BA0222A13FD00D1B0D8 /* HQNotificateModel.swift */,
 			);
 			path = MessageVC;
 			sourceTree = "<group>";
@@ -729,6 +733,7 @@
 				E4C851FD2224CAA40018A9BF /* HQMessageVC.swift in Sources */,
 				E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */,
 				E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */,
+				E4266B9D222A13CF00D1B0D8 /* HQHomeModel.swift in Sources */,
 				E4C8521722253DF40018A9BF /* HQLoginVM.swift in Sources */,
 				E44DDAD0222914F600D3E33F /* HQUserInfoVC.swift in Sources */,
 				E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */,
@@ -743,6 +748,7 @@
 				E44E24F72226665F00D65372 /* HQRegisterVM.swift in Sources */,
 				E4C851F12224CA690018A9BF /* HQRegisterVC.swift in Sources */,
 				E4C852152225322C0018A9BF /* NSString+Category.swift in Sources */,
+				E4266BA1222A13FD00D1B0D8 /* HQNotificateModel.swift in Sources */,
 				E4266B93222A132000D1B0D8 /* HQHomeVM.swift in Sources */,
 				E4AC3CE02227DF6D00974F29 /* HQCommonHeader.swift in Sources */,
 				E4C8520D2224E1BB0018A9BF /* UIView+Category.swift in Sources */,
@@ -759,8 +765,10 @@
 				E4266B95222A133000D1B0D8 /* HQMessageVM.swift in Sources */,
 				E4C851ED2224CA5C0018A9BF /* HQLoginVC.swift in Sources */,
 				E4C8520F2224EE130018A9BF /* UITextField+LimitCount.swift in Sources */,
+				E4266B9B222A13C500D1B0D8 /* HQBannerModel.swift in Sources */,
 				E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */,
 				E4266B97222A133A00D1B0D8 /* HQDemandVM.swift in Sources */,
+				E4266B9F222A13E800D1B0D8 /* HQKindModel.swift in Sources */,
 				E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */,
 				E4C8521322252CB60018A9BF /* UIViewController+HQNavigationBar.swift in Sources */,
 				E44E24F9222669BB00D65372 /* HQPasswordVM.swift in Sources */,
