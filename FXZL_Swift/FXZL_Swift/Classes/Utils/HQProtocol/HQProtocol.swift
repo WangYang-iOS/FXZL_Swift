@@ -19,11 +19,37 @@ extension HQProtocol where Self: UIView {
 }
 
 extension HQProtocol where Self: UITableViewCell {
-    static func registerCellNib(tableView: UITableView,_ nib: String? = nil) -> Void {
+    static func registerCellNib(tableView: UITableView, _ nib: String? = nil) -> Void {
         tableView.register(UINib.init(nibName: nib ?? "\(self)", bundle: nil), forCellReuseIdentifier: nib ?? "\(self)")
     }
-    static func registerCellClass(tableView: UITableView,_ className: String? = nil) -> Void {
+    static func registerCellClass(tableView: UITableView, _ className: String? = nil) -> Void {
         tableView.register(NSClassFromString(className ?? "\(self)"), forCellReuseIdentifier: className ?? "\(self)")
     }
-    
+    static func registerHeaderFooterNib(tableView: UITableView, _ nib: String? = nil) -> Void {
+        tableView.register(UINib.init(nibName: nib ?? "\(self)", bundle: nil), forHeaderFooterViewReuseIdentifier: nib ?? "\(self)")
+    }
+    static func registerHeaderFooterClass(tableView: UITableView, _ className: String? = nil) -> Void {
+        tableView.register(NSClassFromString(className ?? "\(self)"), forHeaderFooterViewReuseIdentifier: className ?? "\(self)")
+    }
+}
+
+extension HQProtocol where Self: UICollectionViewCell {
+    static func registerCellNib(collectionView: UICollectionView, _ nib: String? = nil) -> Void {
+        collectionView.register(UINib.init(nibName: nib ?? "\(self)", bundle: nil), forCellWithReuseIdentifier: nib ?? "\(self)")
+    }
+    static func registerCellClass(collectionView: UICollectionView,_ className: String? = nil) -> Void {
+        collectionView.register(NSClassFromString(className ?? "\(self)"), forCellWithReuseIdentifier: className ?? "\(self)")
+    }
+    static func registerSectionHeaderNib(collectionView: UICollectionView, _ nib: String? = nil) -> Void {
+        collectionView.register(UINib.init(nibName: nib ?? "\(self)", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: nib ?? "\(self)")
+    }
+    static func registerSectionHeaderClass(collectionView: UICollectionView, _ className: String? = nil) -> Void {
+        collectionView.register(NSClassFromString(className ?? "\(self)"), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: className ?? "\(self)")
+    }
+    static func registerSectionFooterNib(collectionView: UICollectionView, _ nib: String? = nil) -> Void {
+        collectionView.register(UINib.init(nibName: nib ?? "\(self)", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: nib ?? "\(self)")
+    }
+    static func registerSectionFooterClass(collectionView: UICollectionView, _ className: String? = nil) -> Void {
+        collectionView.register(NSClassFromString(className ?? "\(self)"), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: className ?? "\(self)")
+    }
 }

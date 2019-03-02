@@ -22,6 +22,7 @@
 		E40C1DEE222A63220022CEDA /* HQCirclePartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40C1DEC222A63220022CEDA /* HQCirclePartCell.xib */; };
 		E40C1DF0222A6F8B0022CEDA /* HQHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C1DEF222A6F8B0022CEDA /* HQHomeHeaderView.swift */; };
 		E40C1DF2222A6F960022CEDA /* HQHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40C1DF1222A6F960022CEDA /* HQHomeHeaderView.xib */; };
+		E40C1DF4222A79C00022CEDA /* UICollectionView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C1DF3222A79C00022CEDA /* UICollectionView+Methods.swift */; };
 		E4266B93222A132000D1B0D8 /* HQHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B92222A132000D1B0D8 /* HQHomeVM.swift */; };
 		E4266B95222A133000D1B0D8 /* HQMessageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B94222A133000D1B0D8 /* HQMessageVM.swift */; };
 		E4266B97222A133A00D1B0D8 /* HQDemandVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4266B96222A133A00D1B0D8 /* HQDemandVM.swift */; };
@@ -105,6 +106,7 @@
 		E40C1DEC222A63220022CEDA /* HQCirclePartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQCirclePartCell.xib; sourceTree = "<group>"; };
 		E40C1DEF222A6F8B0022CEDA /* HQHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQHomeHeaderView.swift; sourceTree = "<group>"; };
 		E40C1DF1222A6F960022CEDA /* HQHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQHomeHeaderView.xib; sourceTree = "<group>"; };
+		E40C1DF3222A79C00022CEDA /* UICollectionView+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Methods.swift"; sourceTree = "<group>"; };
 		E4266B92222A132000D1B0D8 /* HQHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQHomeVM.swift; sourceTree = "<group>"; };
 		E4266B94222A133000D1B0D8 /* HQMessageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQMessageVM.swift; sourceTree = "<group>"; };
 		E4266B96222A133A00D1B0D8 /* HQDemandVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandVM.swift; sourceTree = "<group>"; };
@@ -618,6 +620,7 @@
 				E4C8520C2224E1BB0018A9BF /* UIView+Category.swift */,
 				E4C8521222252CB60018A9BF /* UIViewController+HQNavigationBar.swift */,
 				E44DDAE0222934FA00D3E33F /* UITableView+Methods.swift */,
+				E40C1DF3222A79C00022CEDA /* UICollectionView+Methods.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				E4C8521722253DF40018A9BF /* HQLoginVM.swift in Sources */,
 				E44DDAD0222914F600D3E33F /* HQUserInfoVC.swift in Sources */,
 				E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */,
+				E40C1DF4222A79C00022CEDA /* UICollectionView+Methods.swift in Sources */,
 				E4C851F92224CA880018A9BF /* HQInviteVC.swift in Sources */,
 				E4C851F52224CA760018A9BF /* HQPasswordVC.swift in Sources */,
 				E44E24EE2226247300D65372 /* HQRequestMessage.swift in Sources */,

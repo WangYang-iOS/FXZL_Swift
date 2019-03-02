@@ -21,7 +21,7 @@ class HQCircleCell: UITableViewCell, HQProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionView.register(UINib.init(nibName: "HQCirclePartCell", bundle: nil), forCellWithReuseIdentifier: "HQCirclePartCell")
+        collectionView.registerCellNib("HQCirclePartCell")
         collectionView.reloadData()
     }
 
