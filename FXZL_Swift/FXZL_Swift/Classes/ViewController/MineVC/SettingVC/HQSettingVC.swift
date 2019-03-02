@@ -21,7 +21,6 @@ class HQSettingVC: HQBaseVC {
         tableView.estimatedHeight()
         tableView.registerCellNib("HQSettingCell")
     }
-
 }
 
 extension HQSettingVC : UITableViewDelegate, UITableViewDataSource {
@@ -41,7 +40,6 @@ extension HQSettingVC : UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
         if dataArray[indexPath.section][indexPath.row] == "退出登录" {
             HQUser.shareUser.reset()
             HQCommonMethods.removeValue(kUUIDKey)

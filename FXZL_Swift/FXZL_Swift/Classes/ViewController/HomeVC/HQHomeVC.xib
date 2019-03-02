@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQHomeVC" customModule="FXZL_Swift" customModuleProvider="target">
             <connections>
+                <outlet property="bottomSpace" destination="dYZ-y6-mb8" id="njU-pd-Oo4"/>
+                <outlet property="tableView" destination="FXu-oA-ciC" id="6II-J5-8au"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +21,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-oA-ciC">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ibg-DR-CdB"/>
+                        <outlet property="delegate" destination="-1" id="xud-My-JUY"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FXu-oA-ciC" secondAttribute="trailing" id="0iW-Cy-Spk"/>
+                <constraint firstItem="FXu-oA-ciC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Fis-Im-BQj"/>
+                <constraint firstItem="FXu-oA-ciC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HAH-JJ-UOq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FXu-oA-ciC" secondAttribute="bottom" id="dYZ-y6-mb8"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
