@@ -6,7 +6,7 @@
 //  Copyright © 2019年 yons. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct HQMemberModel: Codable {
     var mobile: String?
@@ -29,4 +29,7 @@ struct HQMemberModel: Codable {
     var is_friend: Int?
     var is_in: Int?//是否在群 或者 圈中
     var isSelected: Bool?
+    
+    var cellHeight: CGFloat?
+    
 }

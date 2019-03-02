@@ -35,8 +35,9 @@ class HQHomeVC: HQBaseVC {
         self.hq_navigation.hiddenLeftButton = true
         self.hq_navigation.titleView = searchButton
         self.hq_navigation.removeNavigationBarBottomLine(true)
+        bottomSpace.constant = KTabH + kSafeBottom
         tableView.estimatedHeight()
-        tableView.registerCellClass("UITableViewCell")
+        tableView.registerCellNib("HQUserInfoCell")
         self.headerView.backgroundColor = UIColor.red
         self.headerView.frame = RECT(0, 0, kScreenW, 9 / 16.0 * kScreenW)
         
@@ -47,14 +48,24 @@ class HQHomeVC: HQBaseVC {
 extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.homeVM.homeModel?.members?.count ?? 0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HQUserInfoCell", for: indexPath) as? HQUserInfoCell
+        let memberModel = self.homeVM.homeModel?.members![indexPath.row]
+        cell?.layoutCell(headerURL: memberModel?.avatar,
+                         name: memberModel?.nickname,
+                         position: memberModel?.position_name,
+                         companyName: memberModel?.company_name,
+                         industry: memberModel?.industry_name,
+                         isVip: memberModel?.vip_state == 1,
+                         isCer: memberModel?.authen_state == "1",
+                         isFriend: memberModel?.is_friend == 1,
+                         isSelf: memberModel?.uuid == HQUser.shareUser.uuid)
+        return cell!
     }
     
     // MARK: - UITableViewDelegate
@@ -62,7 +73,7 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
         //
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return HQUserInfoCell.cellHeightWithModel(memberModel: self.homeVM.homeModel?.members![indexPath.row])
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.01
@@ -84,6 +95,7 @@ extension HQHomeVC {
         self.homeVM.requestHomeInfo {[weak self] (success) in
             let bannerModel = self?.homeVM.homeModel?.banners?.first
             self?.headerImgV.hq_setImage(image: bannerModel?.pic, placeholder: nil)
+            self?.tableView.reloadData()
         }
     }
 }
