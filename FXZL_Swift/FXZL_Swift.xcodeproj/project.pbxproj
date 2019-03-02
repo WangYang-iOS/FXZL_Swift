@@ -248,12 +248,12 @@
 			children = (
 				E49FD0932223F1E900F15930 /* Macros */,
 				E49FD0942223F1E900F15930 /* Model */,
-				E49FD0962223F1E900F15930 /* Resource */,
 				E49FD0922223F1E900F15930 /* Utils */,
 				E49FD0982223F1E900F15930 /* Vendor */,
 				E49FD0952223F1E900F15930 /* View */,
 				E49FD0972223F1E900F15930 /* ViewController */,
 				E49FD0912223F1E900F15930 /* ViewModel */,
+				E49FD0962223F1E900F15930 /* Resource */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
