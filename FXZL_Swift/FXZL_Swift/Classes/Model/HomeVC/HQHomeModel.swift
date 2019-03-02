@@ -8,6 +8,9 @@
 
 import UIKit
 
-class HQHomeModel: HQBaseModel {
-
+struct HQHomeModel: Codable {
+    var banners: [HQBannerModel]?
+    var members: [HQMemberModel]?
+    var circles: [HQCircleModel]?
+    var supply_demands: [HQSupplyModel]?
 }

@@ -16,6 +16,7 @@ class HQInviteVC: HQBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         topSpace.constant = 44 + topSpaceConstant()
+        self.hq_navigation.removeNavigationBarBottomLine(true)
     }
     @IBAction func clickInviteButton(_ sender: UIButton) {
         view.endEditing(true)

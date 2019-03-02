@@ -16,8 +16,8 @@ class HQBaseVC: UIViewController {
         view.backgroundColor = UIColor.white
         automaticallyAdjustsScrollViewInsets = false
         self.hq_navigation.backgroundColor = UIColor.white;
-        self.hq_navigation.leftButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        self.hq_navigation.rightButton.addTarget(self, action: #selector(clickRightButton), for: .touchUpInside)
+        self.hq_navigation.leftButton?.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        self.hq_navigation.rightButton?.addTarget(self, action: #selector(clickRightButton), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +32,10 @@ class HQBaseVC: UIViewController {
     deinit {
         print(NSStringFromClass(self.classForCoder) + "被释放了")
     }
-    
+}
+
+// MARK: - methods
+extension HQBaseVC {
     @objc func goBack() -> Void {
         view.endEditing(true)
         navigationController?.popViewController(animated: true)

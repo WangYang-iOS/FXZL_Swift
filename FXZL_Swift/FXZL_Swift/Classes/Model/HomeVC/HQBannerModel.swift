@@ -8,6 +8,7 @@
 
 import UIKit
 
-class HQBannerModel: HQBaseModel {
-
+struct HQBannerModel: Codable {
+    var url: String?
+    var pic: String?    
 }

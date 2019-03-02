@@ -24,7 +24,6 @@ class HQUserInfoVC: HQBaseVC {
         topSpace.constant = kNavH
         hq_navigation.title = "个人资料"
         hq_navigation.rightButtonTitle = "完成"
-        hq_navigation.removeNavigationBarBottomLine(false)
         refreshUserInfo()
     }
     

@@ -22,6 +22,7 @@ class HQPasswordVC: HQBaseVC {
         super.viewDidLoad()
         topSpace.constant = 44 + topSpaceConstant()
         phoneTF.limitCount = 11
+        self.hq_navigation.removeNavigationBarBottomLine(true)
     }
     @IBAction func clickCodeButton(_ sender: UIButton) {
         view.endEditing(true)

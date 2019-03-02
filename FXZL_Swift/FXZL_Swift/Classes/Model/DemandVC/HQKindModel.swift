@@ -8,6 +8,6 @@
 
 import UIKit
 
-class HQKindModel: HQBaseModel {
+struct HQKindModel: Codable {
 
 }

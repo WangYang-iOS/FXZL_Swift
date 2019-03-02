@@ -23,7 +23,7 @@ class HQLoginVC: HQBaseVC {
         phoneTF.limitCount = 11
         self.hq_navigation.hiddenLeftButton = true
         self.hq_navigation.rightButtonTitle = "注册"
-        
+        self.hq_navigation.removeNavigationBarBottomLine(true)
     }
     @IBAction func clickLoginButton(_ sender: UIButton) {
         view.endEditing(true)
