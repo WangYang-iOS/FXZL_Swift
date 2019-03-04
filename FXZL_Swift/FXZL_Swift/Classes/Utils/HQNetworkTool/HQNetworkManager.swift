@@ -10,18 +10,19 @@ import Foundation
 import Alamofire
 
 class HQNetworkManager {
-    class func postRequest(urlString: String, params: [String:String], callback:@escaping (_ success: Bool,_ responseMessage: HQResponseMessage) -> ()) {
+    class func postRequest(urlString: String, params: [String:Any], callback:@escaping (_ success: Bool,_ responseMessage: HQResponseMessage) -> ()) {
         let URLString = kDomain + urlString
-        print("token == " + "\(HQUser.shareUser.token ?? "")" + "\(HQUser.shareUser.uuid ?? "")")
+        print("token == " + "\(HQUser.shareUser.token ?? "")" + "\nuuid == " + "\(HQUser.shareUser.uuid ?? "")")
         let headers = ["uuid":HQUser.shareUser.uuid ?? "0",
+                       "token":HQUser.shareUser.token ?? "",
                        "version":kAppVersion,
                        "device_type":"1",
                        "sysVersion":kSystemVersion,
-                       "ts":String(NSDate().timeIntervalSince1970),
-                       "token":HQUser.shareUser.token ?? ""]        
+                       "ts":String(NSDate().timeIntervalSince1970)]
+//        Alamofire.SessionManager.default.session.configuration.httpAdditionalHeaders?.updateValue("application/json", forKey: "Accept")
+//        Alamofire.SessionManager.default.session.configuration.httpAdditionalHeaders?.updateValue("application/json", forKey: "Content-Type")
         Alamofire.request(URLString, method: .post, parameters: params, headers: headers).responseJSON { (response) in
             let responseMessage = HQResponseMessage.init(url: URLString, args: params)
-
             switch response.result {
                 case .success(let json):
                     print(json)

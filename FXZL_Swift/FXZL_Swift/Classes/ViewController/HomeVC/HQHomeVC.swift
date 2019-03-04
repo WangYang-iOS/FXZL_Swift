@@ -120,6 +120,20 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            break
+        case 2:
+            let supplyModel = self.homeVM.homeModel?.supply_demands![indexPath.row]
+            let vc = HQDemandDetailVC()
+            vc.sid = supplyModel?.sid
+            navigationController?.pushViewController(vc, animated: true)
+            break
+        default:
+            break
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {

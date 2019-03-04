@@ -59,10 +59,10 @@ extension UIView {
     func getHeight() -> CGFloat {
         return self.frame.size.height
     }
-    func getMidX() -> CGFloat {
+    func getCenterX() -> CGFloat {
         return self.center.x
     }
-    func getMidY() -> CGFloat {
+    func getCenterY() -> CGFloat {
         return self.center.y
     }
     func getMaxX() -> CGFloat {

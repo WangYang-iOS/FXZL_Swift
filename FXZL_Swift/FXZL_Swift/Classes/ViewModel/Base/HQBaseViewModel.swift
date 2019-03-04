@@ -9,5 +9,7 @@
 import UIKit
 
 class HQBaseViewModel: NSObject {
-
+    var page = 1
+    
+    
 }
