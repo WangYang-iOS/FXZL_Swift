@@ -19,36 +19,7 @@ class HQNetworkManager {
                        "device_type":"1",
                        "sysVersion":kSystemVersion,
                        "ts":String(NSDate().timeIntervalSince1970)]
-//        Alamofire.SessionManager.default.session.configuration.httpAdditionalHeaders?.updateValue("application/json", forKey: "Accept")
-//        Alamofire.SessionManager.default.session.configuration.httpAdditionalHeaders?.updateValue("application/json", forKey: "Content-Type")
-        
-//        let request = try? URLRequest(url: URLString, method: .post, headers: headers)
-//        let encodedURLRequest = try? URLEncoding.default.encode(request!, with: params)
-//        Alamofire.request(encodedURLRequest!).responseJSON { (response) in
-//            let responseMessage = HQResponseMessage.init(url: URLString, args: params)
-//            switch response.result {
-//            case .success(let json):
-//                print(json)
-//                let dic = json as! [String : Any]
-//                let code : Int? = dic["code"] as? Int
-//                let msg : String? = dic["msg"] as? String
-//                responseMessage.retCode = String(code ?? 1)
-//                responseMessage.errorMessage = msg ?? ""
-//                if code == 0 {
-//                    responseMessage.responseState = .success
-//                    responseMessage.responseObject = dic["data"]
-//                    callback(true,responseMessage)
-//                }else {
-//                    responseMessage.responseState = .fail
-//                    callback(false,responseMessage)
-//                }
-//            case .failure(let error):
-//                print(error)
-//                callback(false,responseMessage)
-//            }
-//        }
-        
-        Alamofire.request(URLString, method: .post, parameters: params, headers: headers).responseJSON { (response) in
+        Alamofire.request(URLString, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             let responseMessage = HQResponseMessage.init(url: URLString, args: params)
             switch response.result {
                 case .success(let json):

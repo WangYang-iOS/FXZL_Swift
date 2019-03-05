@@ -27,23 +27,8 @@ class HQDemandVM: HQBaseViewModel {
             }
             callback(success)
         }
-        
-        
-//        HQSessonManager.postRequest(urlString: "api/V1/SupplyDemand/SearchSupplyDemand", params: params) { (success, responseManager) in
-//            //
-//        }
-        
-//        HQNetworkManager.postRequest(urlString: "api/V1/SupplyDemand/Home", params: [:]) { (success, responseMessage) in
-//            if success {
-//                if let data = try? JSONSerialization.data(withJSONObject: responseMessage.responseObject as? [String:Any] ?? [:], options: .prettyPrinted) {
-//                    let homeModel = try? JSONDecoder().decode(HQHomeModel.self, from: data)
-//                    self.dataArray = homeModel?.supply_demands
-//                }
-//            }
-//            callback(success)
-//        }X
     }
-    
+        
     func requestDemandDetailVC(_ callback: @escaping (_ success: Bool)->()) {
         guard let sid = sid else {
             return
