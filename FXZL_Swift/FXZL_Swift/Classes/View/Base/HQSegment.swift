@@ -167,6 +167,7 @@ extension HQSegment {
             self.selectedButton.isSelected = !self.selectedButton.isSelected;
             self.selectedButton = button;
         }
+        self.delegate?.segment?(self, didSelectAt: index)
     }
 }
 

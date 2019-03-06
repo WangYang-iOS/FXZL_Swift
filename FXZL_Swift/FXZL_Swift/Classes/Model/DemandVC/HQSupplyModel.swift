@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import HandyJSON
 
-struct HQSupplyModel: Codable {
+struct HQSupplyModel: Codable,HandyJSON {
     var sid: Int?
     var supply_type: String?
     var supply_content: String?
@@ -22,6 +23,8 @@ struct HQSupplyModel: Codable {
     var uuid: String?
     var nickname: String?
     var create_dt: String?
+    var industry_id: String?
+    var industry_name: String?
     
     var view_num: Int?
     var money: CGFloat?

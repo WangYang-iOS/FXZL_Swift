@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQDemandVC" customModule="FXZL_Swift" customModuleProvider="target">
             <connections>
+                <outlet property="bottomSpace" destination="h6i-cF-R4X" id="C7t-vz-vrQ"/>
                 <outlet property="scrollView" destination="fc7-jm-Vrz" id="yVK-MY-EUh"/>
                 <outlet property="topSpace" destination="VgB-yt-vaq" id="Ulm-z7-AAz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
