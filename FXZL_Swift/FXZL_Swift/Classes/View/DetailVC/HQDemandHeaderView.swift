@@ -31,6 +31,10 @@ class HQDemandHeaderView: UIView, HQProtocol{
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    @IBAction func clickUserInfo(_ sender: UIButton) {
+    }
+    @IBAction func clickCompanyInfoButton(_ sender: UIButton) {
+    }
 }
 
 extension HQDemandHeaderView {
@@ -61,7 +65,6 @@ extension HQDemandHeaderView {
                                 supplyContent: String?,
                                 demandType: String?,
                                 demandContent: String?,
-                                companyName: String?,
                                 time: String?,
                                 readNum: String) {
         supplyTypeLabel.text = supplyType;
@@ -90,7 +93,7 @@ extension HQDemandHeaderView {
         if let demand_content = supplyModel.demand_content {
             xuContentH = demand_content.heightWithFont(PingFangSCRegular(15), width: kScreenW - 40,lineSpace: 8)
         }
-        let bottomH: CGFloat = 20 + 1 + 15 + 13 + 15 + 10 + 98 + 10
+        let bottomH: CGFloat = 20 + 1 + 15 + 13 + 15 + 10 + 98
         headerH = topH + gongH + gongContentH + xuH + xuContentH + bottomH
         return headerH
     }

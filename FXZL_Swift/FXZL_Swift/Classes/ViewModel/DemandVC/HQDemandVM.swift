@@ -42,8 +42,8 @@ class HQDemandVM: HQBaseViewModel {
         }
         HQNetworkManager.postRequest(urlString: "api/V1/SupplyDemand/GetSupplyDemandInfo", params: ["sid":sid]) { (success, responseMessage) in
             if success {
-                if let data = try? JSONSerialization.data(withJSONObject: responseMessage.responseObject as? [String:Any] ?? [:], options: .prettyPrinted) {
-                    self.demandDetailModel = try? JSONDecoder().decode(HQDemandDetailModel.self, from: data)
+                if let dic = responseMessage.responseObject as? [String:Any] {
+                    self.demandDetailModel = HQDemandDetailModel.deserialize(from: dic)
                 }
             }
             callback(success)

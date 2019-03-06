@@ -23,12 +23,14 @@ class HQDemandVC: HQBaseVC {
     lazy var demandTableView: HQDemandTableView = {
         let demandTableView = HQDemandTableView.init(frame: scrollView.bounds, style: .plain)
         demandTableView.isDemand = true
+        demandTableView.demandDelegate = self as? HQDemandTableViewDelegate
         scrollView.addSubview(demandTableView)
         return demandTableView
     }()
     lazy var connectTableView: HQDemandTableView = {
         let demandTableView = HQDemandTableView.init(frame: RECT(kScreenW, 0, scrollView.getWidth(), scrollView.getHeight()), style: .plain)
         demandTableView.isDemand = false
+        demandTableView.demandDelegate = self as? HQDemandTableViewDelegate
         scrollView.addSubview(demandTableView)
         return demandTableView
     }()
@@ -80,9 +82,17 @@ extension HQDemandVC: HQSegmentDelegate {
     }
 }
 
-extension HQDemandVC {
-    func layoutScrollView() {
-        
+extension HQDemandVC: HQDemandTableViewDelegate {
+    func didSelected(AtIndex index: Int) {
+        var supplyModel: HQSupplyModel
+        if demandVM.search_type == 1 {
+            supplyModel = demandVM.demandArray![index]
+        }else {
+            supplyModel = demandVM.conectArray![index]
+        }
+        let vc = HQDemandDetailVC()
+        vc.sid = supplyModel.sid
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
+

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol HQDemandTableViewDelegate {
+    func didSelected(AtIndex index:Int ) -> Void
+}
+
 class HQDemandTableView: UITableView {
     
     var dataArray: [HQSupplyModel]? {
@@ -16,6 +20,8 @@ class HQDemandTableView: UITableView {
         }
     }
     var isDemand: Bool = true
+    var demandDelegate: HQDemandTableViewDelegate?
+    
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -87,6 +93,7 @@ extension HQDemandTableView: UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
+        self.demandDelegate?.didSelected(AtIndex: indexPath.row)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isDemand {
