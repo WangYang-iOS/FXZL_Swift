@@ -154,7 +154,6 @@ extension HQUserDetailVC: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        
         return headerView
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -164,7 +163,6 @@ extension HQUserDetailVC: UITableViewDelegate, UITableViewDataSource {
         return 0.01
     }
 }
-
 
 // MARK: - request
 extension HQUserDetailVC {
