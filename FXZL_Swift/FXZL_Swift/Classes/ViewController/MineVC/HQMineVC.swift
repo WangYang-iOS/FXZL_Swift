@@ -117,6 +117,9 @@ extension HQMineVC {
         switch button.tag - 1000 {
         case 0:
             //
+            let userVC = HQUserDetailVC()
+            userVC.uuid = HQUser.shareUser.uuid
+            navigationController?.pushViewController(userVC, animated: true)
             break
         case 1:
             //

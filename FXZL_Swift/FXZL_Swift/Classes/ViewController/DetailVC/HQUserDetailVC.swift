@@ -83,7 +83,19 @@ extension HQUserDetailVC: UITableViewDelegate, UITableViewDataSource {
         return section
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return self.demandCell(tableView:tableView, indexPath:indexPath)
+        if userInfoVM.userInfo?.supply_demand?.count ?? 0 > 0 && userInfoVM.userInfo?.circles?.cid ?? 0 > 0 {
+            if indexPath.section == 0 {
+                return self.demandCell(tableView:tableView, indexPath:indexPath)
+            }else {
+                return UITableViewCell()
+            }
+        }else {
+            if userInfoVM.userInfo?.supply_demand?.count ?? 0 > 0 {
+                return self.demandCell(tableView:tableView, indexPath:indexPath)
+            }else {
+                return UITableViewCell()
+            }
+        }
     }
     
     // MARK: - UITableViewDelegate
