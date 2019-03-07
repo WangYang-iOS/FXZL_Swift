@@ -46,14 +46,14 @@ extension HQDemandHeaderView {
                                   des: String?,
                                   isVip: Bool,
                                   isCer: Bool) {
-        headerImgV.hq_setImage(image: headerURL, placeholder: "ic_default_header")
+        headerImgV.hq_setImage(image: headerURL, placeholder: kDefaultUserHeader)
         nameLabel.text = nickname;
         if position?.count == 0 {
             positionLabel.text = companyName
         }else {
             positionLabel.text = "\(position ?? "")" + "\(companyName ?? "")"
         }
-        self.logo.hq_setImage(image: logo, placeholder: "ic_default_logo")
+        self.logo.hq_setImage(image: logo, placeholder: kDefaultLogo)
         
         companyNameLabel.text = companyName;
         companyDesLabel.text = des;

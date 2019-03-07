@@ -43,7 +43,7 @@ extension HQDemandCell {
                             isCer: Bool?,
                             isFriend: Bool?,
                             isSelf: Bool?) -> Void {
-        headerImgV.hq_setImage(image: headerURL, placeholder: "ic_default_header")
+        headerImgV.hq_setImage(image: headerURL, placeholder: kDefaultUserHeader)
         nameLabel.text = name
         positionLabel.text = position
         companyNameLabel.text = companyName

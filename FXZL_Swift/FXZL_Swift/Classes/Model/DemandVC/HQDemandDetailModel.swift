@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HandyJSON
 
 struct HQDemandDetailModel: Codable, HandyJSON {
     var supply_demand: HQSupplyModel?

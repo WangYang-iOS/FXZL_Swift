@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import HandyJSON
 
 struct HQSupplyModel: Codable,HandyJSON {
     var sid: Int?

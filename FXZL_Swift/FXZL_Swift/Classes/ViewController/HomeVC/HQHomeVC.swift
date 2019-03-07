@@ -123,6 +123,10 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
         //
         switch indexPath.section {
         case 0:
+            let memberModel = self.homeVM.homeModel?.members![indexPath.row]
+            let vc = HQUserDetailVC()
+            vc.uuid = memberModel?.uuid
+            navigationController?.pushViewController(vc, animated: true)
             break
         case 1:
             break

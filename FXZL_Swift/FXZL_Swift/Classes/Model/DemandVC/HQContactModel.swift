@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HandyJSON
 
 struct HQContactModel: Codable,HandyJSON {
     var create_dt: String?

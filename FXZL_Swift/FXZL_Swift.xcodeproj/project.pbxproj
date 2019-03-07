@@ -56,6 +56,12 @@
 		E44E24F52226611D00D65372 /* HQCommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F42226611D00D65372 /* HQCommonTool.swift */; };
 		E44E24F72226665F00D65372 /* HQRegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F62226665F00D65372 /* HQRegisterVM.swift */; };
 		E44E24F9222669BB00D65372 /* HQPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F8222669BB00D65372 /* HQPasswordVM.swift */; };
+		E4594A132230B15700C5EED0 /* HQUserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4594A112230B15700C5EED0 /* HQUserDetailVC.swift */; };
+		E4594A142230B15700C5EED0 /* HQUserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4594A122230B15700C5EED0 /* HQUserDetailVC.xib */; };
+		E4594A172230B32000C5EED0 /* HQUserDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4594A162230B32000C5EED0 /* HQUserDetailVM.swift */; };
+		E4594A1A2230B3AD00C5EED0 /* HQUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4594A192230B3AD00C5EED0 /* HQUserInfoModel.swift */; };
+		E4594A1D2230C30900C5EED0 /* HQUserDemandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4594A1B2230C30900C5EED0 /* HQUserDemandCell.swift */; };
+		E4594A1E2230C30900C5EED0 /* HQUserDemandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4594A1C2230C30900C5EED0 /* HQUserDemandCell.xib */; };
 		E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD07E2223F08100F15930 /* AppDelegate.swift */; };
 		E49FD0862223F08200F15930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49FD0852223F08200F15930 /* Assets.xcassets */; };
 		E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49FD0872223F08200F15930 /* LaunchScreen.storyboard */; };
@@ -151,6 +157,12 @@
 		E44E24F42226611D00D65372 /* HQCommonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonTool.swift; sourceTree = "<group>"; };
 		E44E24F62226665F00D65372 /* HQRegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQRegisterVM.swift; sourceTree = "<group>"; };
 		E44E24F8222669BB00D65372 /* HQPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQPasswordVM.swift; sourceTree = "<group>"; };
+		E4594A112230B15700C5EED0 /* HQUserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserDetailVC.swift; sourceTree = "<group>"; };
+		E4594A122230B15700C5EED0 /* HQUserDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQUserDetailVC.xib; sourceTree = "<group>"; };
+		E4594A162230B32000C5EED0 /* HQUserDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserDetailVM.swift; sourceTree = "<group>"; };
+		E4594A192230B3AD00C5EED0 /* HQUserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserInfoModel.swift; sourceTree = "<group>"; };
+		E4594A1B2230C30900C5EED0 /* HQUserDemandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserDemandCell.swift; sourceTree = "<group>"; };
+		E4594A1C2230C30900C5EED0 /* HQUserDemandCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQUserDemandCell.xib; sourceTree = "<group>"; };
 		E49FD07B2223F08100F15930 /* FXZL_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FXZL_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49FD07E2223F08100F15930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E49FD0852223F08200F15930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +254,8 @@
 			children = (
 				E405D4AF222D0B1300C823AA /* HQDemandDetailVC.swift */,
 				E405D4B0222D0B1300C823AA /* HQDemandDetailVC.xib */,
+				E4594A112230B15700C5EED0 /* HQUserDetailVC.swift */,
+				E4594A122230B15700C5EED0 /* HQUserDetailVC.xib */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -252,6 +266,8 @@
 				E405D4B4222D0DF000C823AA /* HQDemandHeaderView.swift */,
 				E405D4B6222D0DF800C823AA /* HQDemandHeaderView.xib */,
 				E4BD5061222FBF6A0072E4EA /* HQDemandHeaderFooterView.swift */,
+				E4594A1B2230C30900C5EED0 /* HQUserDemandCell.swift */,
+				E4594A1C2230C30900C5EED0 /* HQUserDemandCell.xib */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -300,6 +316,22 @@
 			path = HQCommonTool;
 			sourceTree = "<group>";
 		};
+		E4594A152230B2F600C5EED0 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				E4594A162230B32000C5EED0 /* HQUserDetailVM.swift */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		E4594A182230B39000C5EED0 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				E4594A192230B3AD00C5EED0 /* HQUserInfoModel.swift */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
 		E49FD0722223F08100F15930 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +377,7 @@
 		E49FD0912223F1E900F15930 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E4594A152230B2F600C5EED0 /* DetailVC */,
 				E49FD0AD2223F31100F15930 /* Base */,
 				E49FD0A92223F31100F15930 /* CircleVC */,
 				E49FD0AC2223F31100F15930 /* DemandVC */,
@@ -378,6 +411,7 @@
 		E49FD0942223F1E900F15930 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4594A182230B39000C5EED0 /* DetailVC */,
 				E49FD0B72223F34C00F15930 /* Base */,
 				E49FD0B32223F34C00F15930 /* CircleVC */,
 				E49FD0B62223F34C00F15930 /* DemandVC */,
@@ -763,10 +797,12 @@
 				E4C851EE2224CA5C0018A9BF /* HQLoginVC.xib in Resources */,
 				E4C851F22224CA690018A9BF /* HQRegisterVC.xib in Resources */,
 				E4C851FE2224CAA40018A9BF /* HQMessageVC.xib in Resources */,
+				E4594A1E2230C30900C5EED0 /* HQUserDemandCell.xib in Resources */,
 				E40C1DEE222A63220022CEDA /* HQCirclePartCell.xib in Resources */,
 				E4BD5060222F935C0072E4EA /* HQConnectCell.xib in Resources */,
 				E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */,
 				E44DDAE6222936F400D3E33F /* HQSettingCell.xib in Resources */,
+				E4594A142230B15700C5EED0 /* HQUserDetailVC.xib in Resources */,
 				E40C1DE0222A2A250022CEDA /* HQUserInfoCell.xib in Resources */,
 				E4C851E22224C92B0018A9BF /* HQCircleVC.xib in Resources */,
 				E44DDAD1222914F600D3E33F /* HQUserInfoVC.xib in Resources */,
@@ -838,6 +874,7 @@
 				E4C852082224CFB80018A9BF /* HQCommonConfig.swift in Sources */,
 				E4266B9D222A13CF00D1B0D8 /* HQHomeModel.swift in Sources */,
 				E4C8521722253DF40018A9BF /* HQLoginVM.swift in Sources */,
+				E4594A172230B32000C5EED0 /* HQUserDetailVM.swift in Sources */,
 				E44DDAD0222914F600D3E33F /* HQUserInfoVC.swift in Sources */,
 				E44DDADB22292E9500D3E33F /* HQSettingVC.swift in Sources */,
 				E405D4B1222D0B1300C823AA /* HQDemandDetailVC.swift in Sources */,
@@ -867,6 +904,7 @@
 				E44DDAD722292A4000D3E33F /* HQCommonMethods.swift in Sources */,
 				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
 				E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */,
+				E4594A1A2230B3AD00C5EED0 /* HQUserInfoModel.swift in Sources */,
 				E40C1DD8222A16AB0022CEDA /* HQCircleModel.swift in Sources */,
 				E44DDAE1222934FA00D3E33F /* UITableView+Methods.swift in Sources */,
 				E4C851E92224C96A0018A9BF /* HQHomeVC.swift in Sources */,
@@ -884,10 +922,12 @@
 				E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */,
 				E4266B97222A133A00D1B0D8 /* HQDemandVM.swift in Sources */,
 				E4266B9F222A13E800D1B0D8 /* HQKindModel.swift in Sources */,
+				E4594A1D2230C30900C5EED0 /* HQUserDemandCell.swift in Sources */,
 				E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */,
 				E405D4B5222D0DF000C823AA /* HQDemandHeaderView.swift in Sources */,
 				E4C8521322252CB60018A9BF /* UIViewController+HQNavigationBar.swift in Sources */,
 				E44E24F9222669BB00D65372 /* HQPasswordVM.swift in Sources */,
+				E4594A132230B15700C5EED0 /* HQUserDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
