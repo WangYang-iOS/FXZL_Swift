@@ -32,7 +32,6 @@ class HQUserInfoCell: UITableViewCell {
 }
 
 extension HQUserInfoCell {
-    
     func layoutCell(headerURL: String?,
                     name: String?,
                     position: String?,
@@ -71,7 +70,6 @@ extension HQUserInfoCell {
             rightButton.setTitle("认识Ta", for: .normal)
         }
     }
-    
     
     class func cellHeightWithModel(memberModel: HQMemberModel?) -> CGFloat {
         guard var memberModel = memberModel else {
