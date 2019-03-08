@@ -15,10 +15,11 @@ class HQDemandDetailVC: HQBaseVC {
     @IBOutlet weak var bottomH: NSLayoutConstraint!
     lazy var headerView: HQDemandHeaderView = {
         let headerView = HQDemandHeaderView.loadNib()
+        headerView.delegate = self
         return headerView
     }()
-    var sid: Int?{
-        didSet{
+    var sid: Int? {
+        didSet {
             demandVM.sid = sid
         }
     }
@@ -69,6 +70,18 @@ extension HQDemandDetailVC: UITableViewDelegate, UITableViewDataSource {
         headerSectionView?.frame = RECT(0, 0, kScreenW, 60)
         headerSectionView?.titleLabel.text = "已沟通 · " + "\(demandVM.demandDetailModel?.contacts?.count ?? 0)"
         return headerSectionView
+    }
+}
+
+extension HQDemandDetailVC: HQDemandHeaderViewDelegate {
+    func didSelected(AtIndex index: Int) {
+        if index == 0 {
+            let vc = HQUserDetailVC()
+            vc.uuid = demandVM.demandDetailModel?.supply_demand?.uuid
+            navigationController?.pushViewController(vc, animated: true)
+        }else {
+            //公司
+        }
     }
 }
 

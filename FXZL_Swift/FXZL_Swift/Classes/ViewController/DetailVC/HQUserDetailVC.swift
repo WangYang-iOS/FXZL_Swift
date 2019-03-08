@@ -40,7 +40,9 @@ class HQUserDetailVC: HQBaseVC {
         tableView.estimatedHeight()
         tableView.registerCellClass("UITableViewCell")
         tableView.registerCellNib("HQUserDemandCell")
+        tableView.registerCellNib("HQNewFriendCell")
         tableView.registerHeaderFooterNib("HQHomeHeaderView")
+        
         requestUserInfo()
     }
     
@@ -48,7 +50,9 @@ class HQUserDetailVC: HQBaseVC {
         
     }
     @IBAction func clickUserInfoButton(_ sender: UIButton) {
-        navigationController?.pushViewController(HQUserInfoVC(), animated: true)
+        if HQUser.shareUser.uuid == userInfoVM.uuid {
+            navigationController?.pushViewController(HQUserInfoVC(), animated: true)
+        }
     }
     @IBAction func clickCompanyInfoButton(_ sender: UIButton) {
         
@@ -87,20 +91,46 @@ extension HQUserDetailVC: UITableViewDelegate, UITableViewDataSource {
             if indexPath.section == 0 {
                 return self.demandCell(tableView:tableView, indexPath:indexPath)
             }else {
-                return UITableViewCell()
+                return self.circleCell(tableView:tableView, indexPath:indexPath)
             }
         }else {
             if userInfoVM.userInfo?.supply_demand?.count ?? 0 > 0 {
                 return self.demandCell(tableView:tableView, indexPath:indexPath)
             }else {
-                return UITableViewCell()
+                return self.circleCell(tableView:tableView, indexPath:indexPath)
             }
         }
     }
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        if userInfoVM.userInfo?.supply_demand?.count ?? 0 > 0 && userInfoVM.userInfo?.circles?.cid ?? 0 > 0 {
+            if indexPath.section == 0 {
+                let model = userInfoVM.userInfo?.supply_demand![indexPath.row]
+                if model?.type == 1 {
+                    let vc = HQDemandDetailVC()
+                    vc.sid = model?.sid
+                    navigationController?.pushViewController(vc, animated: true)
+                }else {
+                    //人脉详情
+                }
+            }else {
+                //圈详情
+            }
+        }else {
+            if userInfoVM.userInfo?.supply_demand?.count ?? 0 > 0 {
+                let model = userInfoVM.userInfo?.supply_demand![indexPath.row]
+                if model?.type == 1 {
+                    let vc = HQDemandDetailVC()
+                    vc.sid = model?.sid
+                    navigationController?.pushViewController(vc, animated: true)
+                }else {
+                    //人脉详情
+                }
+            }else {
+                //圈详情
+            }
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if userInfoVM.userInfo?.supply_demand?.count ?? 0 > 0 && userInfoVM.userInfo?.circles?.cid ?? 0 > 0 {
@@ -211,19 +241,19 @@ extension HQUserDetailVC {
                                   showAccessory: Bool?,
                                   isCer: Bool?) {
         userHeaderV.hq_setImage(image: headerURL, placeholder: kDefaultUserHeader)
-        nameLabel.text = nickname;
-        positionLabel.text = position;
-        vipV.isHidden = !(isVip ?? false);
-        accessV.isHidden = !(showAccessory ?? true);
-        cerLabel.isHidden = !(isCer ?? false);
+        nameLabel.text = nickname
+        positionLabel.text = position
+        vipV.isHidden = !(isVip ?? false)
+        accessV.isHidden = !(showAccessory ?? true)
+        cerLabel.isHidden = !(isCer ?? false)
     }
     
     func layoutHeaderViewCompanyInfo(companyName: String?,
                                      logo: String?,
                                      des: String?) {
-        companyNameLabel.text = companyName;
+        companyNameLabel.text = companyName
         logoV.hq_setImage(image: logo, placeholder: kDefaultLogo)
-        companyDesLabel.text = des;
+        companyDesLabel.text = des
     }
     
     func demandCell(tableView: UITableView, indexPath: IndexPath) -> HQUserDemandCell {
@@ -234,6 +264,16 @@ extension HQUserDetailVC {
         time = time  + "\(supplyModel?.contact_num ?? 0)" + "人联系"
         
         cell?.layoutCell(type: supplyModel?.type, supplyType: supplyModel?.supply_type, supplyContent: supplyModel?.supply_content, demandType: supplyModel?.demand_type, demandContent: supplyModel?.demand_content, time: time)
+        return cell!
+    }
+    func circleCell(tableView: UITableView, indexPath: IndexPath) -> HQNewFriendCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HQNewFriendCell", for: indexPath) as? HQNewFriendCell
+        cell?.cellType = .circle
+        let circleModel = userInfoVM.userInfo?.circles
+        cell?.layoutCell(logo: circleModel?.icon,
+                         name: circleModel?.name,
+                         des: "共" + "\(circleModel?.member_num ?? 0)" + "位老板",
+                         showButton: !(userInfoVM.userInfo?.is_circle == 1))
         return cell!
     }
 }

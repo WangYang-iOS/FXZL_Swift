@@ -8,7 +8,11 @@
 
 import UIKit
 
-class HQDemandHeaderView: UIView, HQProtocol{
+protocol HQDemandHeaderViewDelegate {
+    func didSelected(AtIndex index: Int) -> Void
+}
+
+class HQDemandHeaderView: UIView, HQProtocol {
 
     @IBOutlet weak var headerImgV: UIImageView!
     @IBOutlet weak var vipV: UIImageView!
@@ -28,12 +32,16 @@ class HQDemandHeaderView: UIView, HQProtocol{
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var companyDesLabel: UILabel!
     
+    var delegate: HQDemandHeaderViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     @IBAction func clickUserInfo(_ sender: UIButton) {
+        self.delegate?.didSelected(AtIndex: 0)
     }
     @IBAction func clickCompanyInfoButton(_ sender: UIButton) {
+        self.delegate?.didSelected(AtIndex: 1)
     }
 }
 
