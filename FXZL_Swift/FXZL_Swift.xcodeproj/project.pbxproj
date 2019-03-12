@@ -56,6 +56,13 @@
 		E44E24F52226611D00D65372 /* HQCommonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F42226611D00D65372 /* HQCommonTool.swift */; };
 		E44E24F72226665F00D65372 /* HQRegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F62226665F00D65372 /* HQRegisterVM.swift */; };
 		E44E24F9222669BB00D65372 /* HQPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44E24F8222669BB00D65372 /* HQPasswordVM.swift */; };
+		E45781E522374E6E009DA6A9 /* HQDemandChatUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45781E322374E6E009DA6A9 /* HQDemandChatUserCell.swift */; };
+		E45781E622374E6E009DA6A9 /* HQDemandChatUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45781E422374E6E009DA6A9 /* HQDemandChatUserCell.xib */; };
+		E45781E9223752A7009DA6A9 /* HQCompanyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45781E7223752A7009DA6A9 /* HQCompanyDetailVC.swift */; };
+		E45781EA223752A7009DA6A9 /* HQCompanyDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45781E8223752A7009DA6A9 /* HQCompanyDetailVC.xib */; };
+		E45781EC22375506009DA6A9 /* HQCompanyDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45781EB22375506009DA6A9 /* HQCompanyDetailVM.swift */; };
+		E45781EE223755E9009DA6A9 /* HQCompanyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45781ED223755E9009DA6A9 /* HQCompanyInfoModel.swift */; };
+		E45781F02237568F009DA6A9 /* HQCompanyDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45781EF2237568F009DA6A9 /* HQCompanyDetailModel.swift */; };
 		E4594A132230B15700C5EED0 /* HQUserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4594A112230B15700C5EED0 /* HQUserDetailVC.swift */; };
 		E4594A142230B15700C5EED0 /* HQUserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4594A122230B15700C5EED0 /* HQUserDetailVC.xib */; };
 		E4594A172230B32000C5EED0 /* HQUserDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4594A162230B32000C5EED0 /* HQUserDetailVM.swift */; };
@@ -159,6 +166,13 @@
 		E44E24F42226611D00D65372 /* HQCommonTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCommonTool.swift; sourceTree = "<group>"; };
 		E44E24F62226665F00D65372 /* HQRegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQRegisterVM.swift; sourceTree = "<group>"; };
 		E44E24F8222669BB00D65372 /* HQPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQPasswordVM.swift; sourceTree = "<group>"; };
+		E45781E322374E6E009DA6A9 /* HQDemandChatUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDemandChatUserCell.swift; sourceTree = "<group>"; };
+		E45781E422374E6E009DA6A9 /* HQDemandChatUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQDemandChatUserCell.xib; sourceTree = "<group>"; };
+		E45781E7223752A7009DA6A9 /* HQCompanyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCompanyDetailVC.swift; sourceTree = "<group>"; };
+		E45781E8223752A7009DA6A9 /* HQCompanyDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQCompanyDetailVC.xib; sourceTree = "<group>"; };
+		E45781EB22375506009DA6A9 /* HQCompanyDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCompanyDetailVM.swift; sourceTree = "<group>"; };
+		E45781ED223755E9009DA6A9 /* HQCompanyInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCompanyInfoModel.swift; sourceTree = "<group>"; };
+		E45781EF2237568F009DA6A9 /* HQCompanyDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQCompanyDetailModel.swift; sourceTree = "<group>"; };
 		E4594A112230B15700C5EED0 /* HQUserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserDetailVC.swift; sourceTree = "<group>"; };
 		E4594A122230B15700C5EED0 /* HQUserDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQUserDetailVC.xib; sourceTree = "<group>"; };
 		E4594A162230B32000C5EED0 /* HQUserDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQUserDetailVM.swift; sourceTree = "<group>"; };
@@ -260,6 +274,8 @@
 				E405D4B0222D0B1300C823AA /* HQDemandDetailVC.xib */,
 				E4594A112230B15700C5EED0 /* HQUserDetailVC.swift */,
 				E4594A122230B15700C5EED0 /* HQUserDetailVC.xib */,
+				E45781E7223752A7009DA6A9 /* HQCompanyDetailVC.swift */,
+				E45781E8223752A7009DA6A9 /* HQCompanyDetailVC.xib */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -272,6 +288,8 @@
 				E4BD5061222FBF6A0072E4EA /* HQDemandHeaderFooterView.swift */,
 				E4594A1B2230C30900C5EED0 /* HQUserDemandCell.swift */,
 				E4594A1C2230C30900C5EED0 /* HQUserDemandCell.xib */,
+				E45781E322374E6E009DA6A9 /* HQDemandChatUserCell.swift */,
+				E45781E422374E6E009DA6A9 /* HQDemandChatUserCell.xib */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -324,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				E4594A162230B32000C5EED0 /* HQUserDetailVM.swift */,
+				E45781EB22375506009DA6A9 /* HQCompanyDetailVM.swift */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -332,6 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				E4594A192230B3AD00C5EED0 /* HQUserInfoModel.swift */,
+				E45781ED223755E9009DA6A9 /* HQCompanyInfoModel.swift */,
+				E45781EF2237568F009DA6A9 /* HQCompanyDetailModel.swift */,
 			);
 			path = DetailVC;
 			sourceTree = "<group>";
@@ -805,6 +826,7 @@
 				E4C851F22224CA690018A9BF /* HQRegisterVC.xib in Resources */,
 				E4C851FE2224CAA40018A9BF /* HQMessageVC.xib in Resources */,
 				E4594A1E2230C30900C5EED0 /* HQUserDemandCell.xib in Resources */,
+				E45781E622374E6E009DA6A9 /* HQDemandChatUserCell.xib in Resources */,
 				E40C1DEE222A63220022CEDA /* HQCirclePartCell.xib in Resources */,
 				E4BD5060222F935C0072E4EA /* HQConnectCell.xib in Resources */,
 				E49FD0892223F08200F15930 /* LaunchScreen.storyboard in Resources */,
@@ -815,6 +837,7 @@
 				E44DDAD1222914F600D3E33F /* HQUserInfoVC.xib in Resources */,
 				E4C851E62224C95E0018A9BF /* HQDemandVC.xib in Resources */,
 				E4C851F62224CA760018A9BF /* HQPasswordVC.xib in Resources */,
+				E45781EA223752A7009DA6A9 /* HQCompanyDetailVC.xib in Resources */,
 				E49FD0862223F08200F15930 /* Assets.xcassets in Resources */,
 				E405D4B7222D0DF800C823AA /* HQDemandHeaderView.xib in Resources */,
 				E40C1DE6222A4EEE0022CEDA /* HQCircleCell.xib in Resources */,
@@ -872,6 +895,7 @@
 				E4BD505F222F935C0072E4EA /* HQConnectCell.swift in Sources */,
 				E49FD0BC2223F37800F15930 /* HQBaseViewModel.swift in Sources */,
 				E4C8520B2224DCD40018A9BF /* UIColor+Hex.swift in Sources */,
+				E45781EE223755E9009DA6A9 /* HQCompanyInfoModel.swift in Sources */,
 				E40C1DE9222A4EFC0022CEDA /* HQDemandCell.swift in Sources */,
 				E4C851FD2224CAA40018A9BF /* HQMessageVC.swift in Sources */,
 				E49FD0BA2223F36800F15930 /* HQBaseModel.swift in Sources */,
@@ -910,8 +934,10 @@
 				E40C1DED222A63220022CEDA /* HQCirclePartCell.swift in Sources */,
 				E44DDAD722292A4000D3E33F /* HQCommonMethods.swift in Sources */,
 				E4C852012224CAAF0018A9BF /* HQMineVC.swift in Sources */,
+				E45781E9223752A7009DA6A9 /* HQCompanyDetailVC.swift in Sources */,
 				E44E24F02226248000D65372 /* HQResponseMessage.swift in Sources */,
 				E4594A1A2230B3AD00C5EED0 /* HQUserInfoModel.swift in Sources */,
+				E45781EC22375506009DA6A9 /* HQCompanyDetailVM.swift in Sources */,
 				E40C1DD8222A16AB0022CEDA /* HQCircleModel.swift in Sources */,
 				E44DDAE1222934FA00D3E33F /* UITableView+Methods.swift in Sources */,
 				E4C851E92224C96A0018A9BF /* HQHomeVC.swift in Sources */,
@@ -928,12 +954,14 @@
 				E4266B9B222A13C500D1B0D8 /* HQBannerModel.swift in Sources */,
 				E49FD07F2223F08100F15930 /* AppDelegate.swift in Sources */,
 				E4266B97222A133A00D1B0D8 /* HQDemandVM.swift in Sources */,
+				E45781E522374E6E009DA6A9 /* HQDemandChatUserCell.swift in Sources */,
 				E4266B9F222A13E800D1B0D8 /* HQKindModel.swift in Sources */,
 				E4594A1D2230C30900C5EED0 /* HQUserDemandCell.swift in Sources */,
 				E49FD0B12223F32A00F15930 /* HQBaseView.swift in Sources */,
 				E4ABB4642231FFFE0085F1AA /* HQNewFriendCell.swift in Sources */,
 				E405D4B5222D0DF000C823AA /* HQDemandHeaderView.swift in Sources */,
 				E4C8521322252CB60018A9BF /* UIViewController+HQNavigationBar.swift in Sources */,
+				E45781F02237568F009DA6A9 /* HQCompanyDetailModel.swift in Sources */,
 				E44E24F9222669BB00D65372 /* HQPasswordVM.swift in Sources */,
 				E4594A132230B15700C5EED0 /* HQUserDetailVC.swift in Sources */,
 			);

@@ -55,7 +55,9 @@ class HQUserDetailVC: HQBaseVC {
         }
     }
     @IBAction func clickCompanyInfoButton(_ sender: UIButton) {
-        
+        let vc = HQCompanyDetailVC()
+        vc.cid = userInfoVM.userInfo?.member?.company_id
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

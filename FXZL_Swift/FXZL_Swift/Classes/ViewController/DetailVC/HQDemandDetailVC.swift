@@ -31,7 +31,7 @@ class HQDemandDetailVC: HQBaseVC {
         topSpace.constant = topSpaceConstant()
         AdjustmentBehavior(tableView)
         tableView.estimatedHeight()
-        tableView.registerCellClass("UITableViewCell")
+        tableView.registerCellNib("HQDemandChatUserCell")
 //        tableView.registerHeaderFooterClass("HQDemandHeaderFooterView")
         tableView.register(HQDemandHeaderFooterView.classForCoder(), forHeaderFooterViewReuseIdentifier: "HQDemandHeaderFooterView")
         requestDetailData()
@@ -47,9 +47,12 @@ extension HQDemandDetailVC: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-//        cell.contentView.backgroundColor = UIColor.red
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HQDemandChatUserCell", for: indexPath) as? HQDemandChatUserCell
+        cell?.showSelectButton = false
+        cell?.showBottomLine(hidden: false, leftSpace: 0)
+        let model = demandVM.demandDetailModel?.contacts![indexPath.row]
+        cell?.layoutCell(headerURL: model?.avatar, title: model?.nickname, subTitle: model?.create_dt)
+        return cell!
     }
     
     // MARK: - UITableViewDelegate

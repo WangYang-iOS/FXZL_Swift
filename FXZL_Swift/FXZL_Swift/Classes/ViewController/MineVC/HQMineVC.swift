@@ -126,6 +126,9 @@ extension HQMineVC {
             break
         case 2:
             //
+            let vc = HQCompanyDetailVC()
+            vc.cid = HQUser.shareUser.company_id
+            navigationController?.pushViewController(vc, animated: true)
             break
         case 3:
             //
