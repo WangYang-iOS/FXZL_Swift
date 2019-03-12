@@ -8,3 +8,4 @@
 
 import Foundation
 import Kingfisher
+@_exported import HandyJSON

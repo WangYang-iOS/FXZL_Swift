@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct HQMemberModel: Codable {
+struct HQMemberModel: Codable, HandyJSON{
     var mobile: String?
     var birthday: String?
     var nickname: String?

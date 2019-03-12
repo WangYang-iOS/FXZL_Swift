@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct HQCircleModel: Codable {
+struct HQCircleModel: Codable, HandyJSON {
     var cid: Int?
     var icon: String?
     var name: String?

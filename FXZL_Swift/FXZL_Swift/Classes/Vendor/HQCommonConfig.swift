@@ -9,6 +9,10 @@
 import UIKit
 
 let kDomain                 = "http://api.fenxiangzl.com/"
+let kDefaultUserHeader      = "ic_default_header"
+let kDefaultLogo            = "ic_default_logo"
+
+
 
 let kSpaceName              = Bundle.main.infoDictionary!["CFBundleName"] as! String
 let kAppVersion             = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String

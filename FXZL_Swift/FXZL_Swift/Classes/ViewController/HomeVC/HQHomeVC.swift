@@ -10,10 +10,11 @@ import UIKit
 
 class HQHomeVC: HQBaseVC {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topSpace: NSLayoutConstraint!
     @IBOutlet weak var bottomSpace: NSLayoutConstraint!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerImgV: UIImageView!
-
+    
     var searchButton: UIButton = {
         let button = UIButton(type: .custom)
         button.frame = RECT(0, 0, kScreenW - 30, 28)
@@ -122,6 +123,10 @@ extension HQHomeVC : UITableViewDelegate, UITableViewDataSource {
         //
         switch indexPath.section {
         case 0:
+            let memberModel = self.homeVM.homeModel?.members![indexPath.row]
+            let vc = HQUserDetailVC()
+            vc.uuid = memberModel?.uuid
+            navigationController?.pushViewController(vc, animated: true)
             break
         case 1:
             break
@@ -199,6 +204,7 @@ extension HQHomeVC {
             }else {
                 self?.headerView.frame = RECT(0, 0, kScreenW, 0)
             }
+            self?.tableView.tableHeaderView = self?.headerView
             
             self?.tableView.isHidden = false
             self?.tableView.reloadData()

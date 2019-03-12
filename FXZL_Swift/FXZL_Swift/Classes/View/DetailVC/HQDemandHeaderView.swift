@@ -8,7 +8,11 @@
 
 import UIKit
 
-class HQDemandHeaderView: UIView, HQProtocol{
+protocol HQDemandHeaderViewDelegate {
+    func didSelected(AtIndex index: Int) -> Void
+}
+
+class HQDemandHeaderView: UIView, HQProtocol {
 
     @IBOutlet weak var headerImgV: UIImageView!
     @IBOutlet weak var vipV: UIImageView!
@@ -28,8 +32,16 @@ class HQDemandHeaderView: UIView, HQProtocol{
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var companyDesLabel: UILabel!
     
+    var delegate: HQDemandHeaderViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    @IBAction func clickUserInfo(_ sender: UIButton) {
+        self.delegate?.didSelected(AtIndex: 0)
+    }
+    @IBAction func clickCompanyInfoButton(_ sender: UIButton) {
+        self.delegate?.didSelected(AtIndex: 1)
     }
 }
 
@@ -42,14 +54,14 @@ extension HQDemandHeaderView {
                                   des: String?,
                                   isVip: Bool,
                                   isCer: Bool) {
-        headerImgV.hq_setImage(image: headerURL, placeholder: "ic_default_header")
+        headerImgV.hq_setImage(image: headerURL, placeholder: kDefaultUserHeader)
         nameLabel.text = nickname;
         if position?.count == 0 {
             positionLabel.text = companyName
         }else {
             positionLabel.text = "\(position ?? "")" + "\(companyName ?? "")"
         }
-        self.logo.hq_setImage(image: logo, placeholder: "ic_default_logo")
+        self.logo.hq_setImage(image: logo, placeholder: kDefaultLogo)
         
         companyNameLabel.text = companyName;
         companyDesLabel.text = des;
@@ -61,7 +73,6 @@ extension HQDemandHeaderView {
                                 supplyContent: String?,
                                 demandType: String?,
                                 demandContent: String?,
-                                companyName: String?,
                                 time: String?,
                                 readNum: String) {
         supplyTypeLabel.text = supplyType;
@@ -90,7 +101,7 @@ extension HQDemandHeaderView {
         if let demand_content = supplyModel.demand_content {
             xuContentH = demand_content.heightWithFont(PingFangSCRegular(15), width: kScreenW - 40,lineSpace: 8)
         }
-        let bottomH: CGFloat = 20 + 1 + 15 + 13 + 15 + 10 + 98 + 10
+        let bottomH: CGFloat = 20 + 1 + 15 + 13 + 15 + 10 + 98
         headerH = topH + gongH + gongContentH + xuH + xuContentH + bottomH
         return headerH
     }

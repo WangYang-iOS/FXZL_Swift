@@ -15,6 +15,7 @@
                 <outlet property="headerImgV" destination="bLe-lJ-FZf" id="Xl7-VO-qfS"/>
                 <outlet property="headerView" destination="3i6-k5-M3v" id="izT-Fw-dfw"/>
                 <outlet property="tableView" destination="FXu-oA-ciC" id="6II-J5-8au"/>
+                <outlet property="topSpace" destination="Fis-Im-BQj" id="kNP-0o-eIs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,17 +28,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="3i6-k5-M3v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-lJ-FZf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-lJ-FZf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bLe-lJ-FZf" secondAttribute="bottom" id="Zey-iO-6O5"/>
                             <constraint firstAttribute="trailing" secondItem="bLe-lJ-FZf" secondAttribute="trailing" id="eUn-tN-qWX"/>
-                            <constraint firstAttribute="bottom" secondItem="bLe-lJ-FZf" secondAttribute="bottom" id="ig7-iH-coj"/>
                             <constraint firstItem="bLe-lJ-FZf" firstAttribute="leading" secondItem="3i6-k5-M3v" secondAttribute="leading" id="lzy-Mm-IO2"/>
                             <constraint firstItem="bLe-lJ-FZf" firstAttribute="top" secondItem="3i6-k5-M3v" secondAttribute="top" id="mNB-CJ-Xo3"/>
                         </constraints>
@@ -55,6 +56,7 @@
                 <constraint firstItem="FXu-oA-ciC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HAH-JJ-UOq"/>
                 <constraint firstAttribute="bottom" secondItem="FXu-oA-ciC" secondAttribute="bottom" id="dYZ-y6-mb8"/>
             </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>

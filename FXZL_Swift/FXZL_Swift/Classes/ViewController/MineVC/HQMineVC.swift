@@ -52,9 +52,9 @@ class HQMineVC: HQBaseVC {
                 positionLabel.text = "您的资料还没有完善哦"
             }
         }else {
-            headerImgV.image = UIImage(named: "ic_noLogin_header");
-            nameLabel.text = "未登录";
-            positionLabel.text = "欢迎来到分享众联";
+            headerImgV.image = UIImage(named: "ic_noLogin_header")
+            nameLabel.text = "未登录"
+            positionLabel.text = "欢迎来到分享众联"
             logoIcon.isHidden = true
         }
     }
@@ -83,9 +83,9 @@ extension HQMineVC {
             var button = contentView.viewWithTag(1000 + i) as? UIButton
             if button == nil {
                 button = UIButton(type: .custom)
-                button?.frame = RECT(X, Y, width, height);
-                button?.tag = 1000 + i;
-                button?.titleLabel?.font = PingFangSCRegular(13);
+                button?.frame = RECT(X, Y, width, height)
+                button?.tag = 1000 + i
+                button?.titleLabel?.font = PingFangSCRegular(13)
                 button?.setTitleColor(UIColor.hexString(colorString: "2B3343"), for: .normal)
                 contentView.addSubview(button!)
                 button?.addTarget(self, action: #selector(clickCenterItem), for: .touchUpInside)
@@ -99,14 +99,14 @@ extension HQMineVC {
         for i in 0..<line {
             var label = contentView.viewWithTag(10000 + i) as? UILabel
             if label == nil {
-                label = UILabel();
-                label?.tag = 10000 + i;
-                label?.frame = RECT(0, CGFloat(i) * height, kScreenW - 40, kLineH);
+                label = UILabel()
+                label?.tag = 10000 + i
+                label?.frame = RECT(0, CGFloat(i) * height, kScreenW - 40, kLineH)
                 label?.backgroundColor = UIColor.hexString(colorString: "ebebeb")
                 contentView.addSubview(label!)
             }
         }
-        bottomSpace.constant = kScreenH - KTabH - kSafeBottom - 65 - 44 - 90 - 24 - contentH.constant + 1;
+        bottomSpace.constant = kScreenH - KTabH - kSafeBottom - 65 - 44 - 90 - 24 - contentH.constant + 1
     }
     
     @objc func clickCenterItem(_ button : UIButton) -> Void {
@@ -117,12 +117,18 @@ extension HQMineVC {
         switch button.tag - 1000 {
         case 0:
             //
+            let userVC = HQUserDetailVC()
+            userVC.uuid = HQUser.shareUser.uuid
+            navigationController?.pushViewController(userVC, animated: true)
             break
         case 1:
             //
             break
         case 2:
             //
+            let vc = HQCompanyDetailVC()
+            vc.cid = HQUser.shareUser.company_id
+            navigationController?.pushViewController(vc, animated: true)
             break
         case 3:
             //

@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQDemandDetailVC" customModule="FXZL_Swift" customModuleProvider="target">
             <connections>
                 <outlet property="bottomButton" destination="zfF-SI-Hr3" id="HFe-Ro-BLd"/>
+                <outlet property="bottomH" destination="Zef-M3-uk9" id="KQV-79-BOq"/>
                 <outlet property="tableView" destination="I2j-Bp-hwt" id="xDN-yu-9rP"/>
                 <outlet property="topSpace" destination="mir-cU-KhA" id="mNk-fB-yJa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

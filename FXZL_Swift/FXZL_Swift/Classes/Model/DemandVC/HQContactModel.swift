@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HQContactModel: Codable {
+struct HQContactModel: Codable,HandyJSON {
     var create_dt: String?
     var uuid: String?
     var nickname: String?

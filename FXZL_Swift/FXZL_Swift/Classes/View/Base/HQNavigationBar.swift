@@ -38,7 +38,7 @@ class HQNavigationBar: HQBaseView {
     }()
     lazy var titleLabel: UILabel? = {
         let titleLabel = UILabel.init(frame: RECT(0, 0, kScreenW - 60 * 2, 44))
-        titleLabel.font = PingFangSCRegular(18)
+        titleLabel.font = PingFangSCBold(18)
         titleLabel.textColor = UIColor.hexString(colorString: "2B3343")
         titleLabel.textAlignment = .center
         titleLabel.center = POINT(kScreenW / 2.0, 22)

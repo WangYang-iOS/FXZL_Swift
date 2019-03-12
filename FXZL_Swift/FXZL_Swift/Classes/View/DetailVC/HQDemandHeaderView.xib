@@ -83,7 +83,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzT-tf-hRv">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="90"/>
                                     <connections>
-                                        <action selector="clickUserInfoButton:" destination="b0r-dv-ezl" eventType="touchUpInside" id="tYd-Vv-1A1"/>
+                                        <action selector="clickUserInfo:" destination="b0r-dv-ezl" eventType="touchUpInside" id="XI3-fN-5NI"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -138,7 +138,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6B-Sv-err">
-                    <rect key="frame" x="0.0" y="150" width="375" height="290"/>
+                    <rect key="frame" x="0.0" y="150" width="375" height="287"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="供" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udm-vw-63y">
                             <rect key="frame" x="20" y="0.0" width="24" height="24"/>
@@ -227,22 +227,22 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_demand_time" translatesAutoresizingMaskIntoConstraints="NO" id="r9E-pr-o20">
-                            <rect key="frame" x="20" y="249" width="16" height="16"/>
+                            <rect key="frame" x="20" y="249" width="13" height="13"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6小时前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFI-ed-mMv">
-                            <rect key="frame" x="41" y="249" width="43.5" height="17"/>
+                            <rect key="frame" x="38" y="247.5" width="43.5" height="17"/>
                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
                             <color key="textColor" red="0.59999999999999998" green="0.61568627450000002" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="561人浏览" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnQ-L8-Xxn">
-                            <rect key="frame" x="299.5" y="239" width="55.5" height="36"/>
+                            <rect key="frame" x="299.5" y="239" width="55.5" height="33"/>
                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
                             <color key="textColor" red="0.59999999999999998" green="0.61568627450000002" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvn-xm-f61">
-                            <rect key="frame" x="0.0" y="280" width="375" height="10"/>
+                            <rect key="frame" x="0.0" y="277" width="375" height="10"/>
                             <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="10" id="fjU-ve-NlP"/>
@@ -285,7 +285,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eet-i3-csj">
-                    <rect key="frame" x="0.0" y="440" width="375" height="98"/>
+                    <rect key="frame" x="0.0" y="437" width="375" height="98"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OcX-2n-8Bl">
                             <rect key="frame" x="20" y="25" width="48" height="48"/>
@@ -327,7 +327,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-je-SGB">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
                             <connections>
-                                <action selector="clickCompanyInfoButton:" destination="b0r-dv-ezl" eventType="touchUpInside" id="4rU-Bw-ucw"/>
+                                <action selector="clickCompanyInfoButton:" destination="b0r-dv-ezl" eventType="touchUpInside" id="CkJ-5J-JDo"/>
                             </connections>
                         </button>
                     </subviews>
@@ -349,7 +349,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-g9-swD">
-                    <rect key="frame" x="0.0" y="538" width="375" height="10"/>
+                    <rect key="frame" x="0.0" y="535" width="375" height="10"/>
                     <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="QWa-7a-w29"/>
@@ -398,7 +398,7 @@
     </objects>
     <resources>
         <image name="ic_access_right" width="8" height="15"/>
-        <image name="ic_demand_time" width="16" height="16"/>
+        <image name="ic_demand_time" width="13" height="13"/>
         <image name="ic_vip" width="14" height="14"/>
     </resources>
 </document>

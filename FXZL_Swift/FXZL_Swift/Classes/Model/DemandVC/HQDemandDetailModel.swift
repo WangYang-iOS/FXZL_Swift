@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct HQDemandDetailModel: Codable {
+struct HQDemandDetailModel: Codable, HandyJSON {
     var supply_demand: HQSupplyModel?
     var contacts: [HQContactModel]?
     var is_friend: Bool?
     var count_members: Int?
     var count_supplys: Int?
-    var share_url: [String]?
+    var share_url: String?
 }

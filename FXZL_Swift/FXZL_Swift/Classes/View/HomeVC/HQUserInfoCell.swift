@@ -32,7 +32,6 @@ class HQUserInfoCell: UITableViewCell {
 }
 
 extension HQUserInfoCell {
-    
     func layoutCell(headerURL: String?,
                     name: String?,
                     position: String?,
@@ -42,7 +41,7 @@ extension HQUserInfoCell {
                     isCer: Bool?,
                     isFriend: Bool?,
                     isSelf: Bool?) -> Void {
-        headerImgV.hq_setImage(image: headerURL, placeholder: "ic_default_header")
+        headerImgV.hq_setImage(image: headerURL, placeholder: kDefaultUserHeader)
         nameLabel.text = name
         positionLabel.text = position
         companyNameLabel.text = companyName
@@ -71,7 +70,6 @@ extension HQUserInfoCell {
             rightButton.setTitle("认识Ta", for: .normal)
         }
     }
-    
     
     class func cellHeightWithModel(memberModel: HQMemberModel?) -> CGFloat {
         guard var memberModel = memberModel else {
