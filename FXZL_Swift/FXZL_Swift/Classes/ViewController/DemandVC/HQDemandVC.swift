@@ -42,7 +42,7 @@ class HQDemandVC: HQBaseVC {
         self.hq_navigation.hiddenLeftButton = true
         self.hq_navigation.titleView = segment
         topSpace.constant = topSpaceConstant()
-        bottomSpace.constant = KTabH + kSafeBottom
+        bottomSpace.constant = bottomSpaceConstant()
         scrollView.contentSize = SIZE(kScreenW * CGFloat(2), 0)
     }
     
