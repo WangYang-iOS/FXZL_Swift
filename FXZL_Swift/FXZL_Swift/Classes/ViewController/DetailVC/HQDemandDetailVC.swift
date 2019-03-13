@@ -84,6 +84,9 @@ extension HQDemandDetailVC: HQDemandHeaderViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         }else {
             //公司
+            let vc = HQCompanyDetailVC()
+            vc.cid = demandVM.demandDetailModel?.supply_demand?.company_id
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

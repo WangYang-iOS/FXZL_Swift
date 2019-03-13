@@ -6,7 +6,7 @@
 //  Copyright © 2019年 yons. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct HQCompanyInfoModel: HandyJSON {
     var cid: Int?
@@ -23,4 +23,6 @@ struct HQCompanyInfoModel: HandyJSON {
     var area_id: String?
     var industry_id: String?
     var industry_name: String?
+    var cellHeight: CGFloat?
+    
 }

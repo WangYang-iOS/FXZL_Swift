@@ -262,7 +262,7 @@ extension HQUserDetailVC {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HQUserDemandCell", for: indexPath) as? HQUserDemandCell
         
         let supplyModel = userInfoVM.userInfo?.supply_demand![indexPath.row]
-        var time = supplyModel?.create_dt ?? "" + " · " + "\(supplyModel?.view_num ?? 0)" + "人浏览 · "
+        var time = (supplyModel?.create_dt ?? "") + " · " + "\(supplyModel?.view_num ?? 0)" + "人浏览 · "
         time = time  + "\(supplyModel?.contact_num ?? 0)" + "人联系"
         
         cell?.layoutCell(type: supplyModel?.type, supplyType: supplyModel?.supply_type, supplyContent: supplyModel?.supply_content, demandType: supplyModel?.demand_type, demandContent: supplyModel?.demand_content, time: time)
