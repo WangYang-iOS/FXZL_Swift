@@ -57,7 +57,13 @@ func topSpaceConstant() -> CGFloat {
         return kNavH
     }
 }
-
+func bottomSpaceConstant() -> CGFloat {
+    if #available(iOS 11.0, *) {
+        return 0
+    }else {
+        return KTabH + kSafeBottom
+    }
+}
 
 
 

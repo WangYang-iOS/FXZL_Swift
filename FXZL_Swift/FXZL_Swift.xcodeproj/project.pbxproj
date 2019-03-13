@@ -888,7 +888,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FXZL_Swift/Pods-FXZL_Swift-frameworks.sh\"\n";
