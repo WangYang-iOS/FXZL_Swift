@@ -23,14 +23,14 @@ class HQDemandVC: HQBaseVC {
     lazy var demandTableView: HQDemandTableView = {
         let demandTableView = HQDemandTableView.init(frame: scrollView.bounds, style: .plain)
         demandTableView.isDemand = true
-        demandTableView.demandDelegate = self as? HQDemandTableViewDelegate
+        demandTableView.demandDelegate = self as HQDemandTableViewDelegate
         scrollView.addSubview(demandTableView)
         return demandTableView
     }()
     lazy var connectTableView: HQDemandTableView = {
         let demandTableView = HQDemandTableView.init(frame: RECT(kScreenW, 0, scrollView.getWidth(), scrollView.getHeight()), style: .plain)
         demandTableView.isDemand = false
-        demandTableView.demandDelegate = self as? HQDemandTableViewDelegate
+        demandTableView.demandDelegate = self as HQDemandTableViewDelegate
         scrollView.addSubview(demandTableView)
         return demandTableView
     }()
@@ -59,11 +59,8 @@ class HQDemandVC: HQBaseVC {
 extension HQDemandVC: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         segment.moveBottomView(contentOffset: scrollView.contentOffset)
-    }
-}
-
-extension HQDemandVC: HQSegmentDelegate {
-    func segment(_ segment: HQSegment, didSelectAt index: Int) {
+        
+        let index: Int = Int(floor((scrollView.contentOffset.x + kScreenW / 2.0) / kScreenW))
         demandVM.search_type = index + 1
         if self.demandVM.demandArray?.count ?? 0 == 0  && index == 0 {
             demandVM.requestDemandData { [weak self] (success) in
@@ -79,6 +76,12 @@ extension HQDemandVC: HQSegmentDelegate {
                 }
             }
         }
+    }
+}
+
+extension HQDemandVC: HQSegmentDelegate {
+    func segment(_ segment: HQSegment, didSelectAt index: Int) {
+        scrollView.setContentOffset(POINT(kScreenW * CGFloat(index), 0), animated: true)
     }
 }
 

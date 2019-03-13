@@ -136,9 +136,6 @@ extension HQSegment {
             self.selectedButton.isSelected = !self.selectedButton.isSelected;
             self.selectedButton = button;
         }
-        UIView.animate(withDuration: 0.25) {
-            self.bottomView?.center = POINT(button.center.x, (self.bottomView?.center.y)!);
-        }
         self.delegate?.segment?(self, didSelectAt: button.tag - 1000)
     }
 }
@@ -167,7 +164,6 @@ extension HQSegment {
             self.selectedButton.isSelected = !self.selectedButton.isSelected;
             self.selectedButton = button;
         }
-        self.delegate?.segment?(self, didSelectAt: index)
     }
 }
 
