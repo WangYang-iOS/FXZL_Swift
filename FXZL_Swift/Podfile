@@ -1,14 +1,11 @@
 platform :ios,'9.0'
-
 target 'FXZL_Swift' do
-
 use_frameworks!
 pod 'IQKeyboardManagerSwift', '~> 6.2.0'
 pod 'Alamofire', '~> 4.8.1'
 pod 'Kingfisher', '~> 4.6.0'
 pod 'Moya', '~> 12.0.1'
-pod 'HandyJSON', '~> 4.1.3'
-
+pod 'HandyJSON', '~> 4.2.1'
 end
 
 
